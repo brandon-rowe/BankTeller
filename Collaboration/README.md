@@ -4,7 +4,7 @@
 <ul>
 	<li>Links for Research</li>
 	<ul>
-		<li><a href="https://www.engadget.com/2012/09/04/raspberry-pi-getting-started-guide-how-to/">"How to" Rasberry</a></li>
+		<li><a href="https://www.engadget.com/2012/09/04/raspberry-pi-getting-started-guide-how-to/">How to Rasberry</a></li>
 		<li><a href="https://www.raspberrypi.org/documentation/usage/python/">RasberryPy (Python Tutorial)</a></li>
 		<li><a href="https://www.python.org/">Python Turorials and Documentation</a></li>
 		

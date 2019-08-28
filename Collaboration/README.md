@@ -5,8 +5,7 @@
 	<li>Links for Research</li>
 	<ul>
 		<li><a href="https://www.engadget.com/2012/09/04/raspberry-pi-getting-started-guide-how-to/">"How to" Rasberry</a></li>
-	
-	
+	</ul>	
 	<li>Links for RasberryPi</li>
 	<ul>
 		<li><a href="https://www.raspberrypi.org/">Getting Started</a></li>

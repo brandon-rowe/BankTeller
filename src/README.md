@@ -10,7 +10,7 @@
 	<ul>
 		<li><a href="#">Once I have commited a few changes you all should see the gist of how we document.</a></li>
 	</ul>
-	<li>3</li>
+	<li>These lists and sublists are just placeholders for the moment. Creating the layout.</li>
 </ul>
 
 <h2>Change Log</h2>

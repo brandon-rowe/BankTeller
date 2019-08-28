@@ -15,21 +15,18 @@
 
 <h2>Change Log</h2>
 <ul>
-	<li>Log your time and file changes here.</li>
+	<li>Brandon</li>
 	<ul>
-		<li><a href="#">Brandon</a></li>
-		<ul>
-			<li><a href="#">8-28-19 README.md files and initial folders.</a></li>
-		</ul>
+		<li><a href="#">8-28-19 README.md files and initial folders.</a></li>		
 	</ul>
-	<li>2</li>
+	<li>Conner</li>
 	<ul>
-		<li><a href="#">Conner</a></li>
-	</ul>
+		<li><a href="#">First Change</a></li>
+	</ul>	
+	<li>Josh</li>
 	<ul>
-		<li><a href="#">Josh</a></li>
-	</ul>
-	<li>3</li>
+		<li><a href="#">First Change</a></li>
+	</ul>	
 </ul>
 
 

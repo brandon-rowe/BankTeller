@@ -7,7 +7,7 @@
 	<ul>
 		<li><a href="https://www.raspberrypi.org/">Getting Started</a></li>
 		<li><a href="https://en.wikipedia.org/wiki/Raspberry_Pi">Rasberry Pi Wiki</a></li>
-		<li><a href="https://opensource.com/resources/raspberry-pi">Open Source Resources/a></li>
+		<li><a href="https://opensource.com/resources/raspberry-pi">Open Source Resources</a></li>
 		<li><a href="https://www.youtube.com/channel/UCFIjVWFZ__KhtTXHDJ7vgng">Rasberry Pi Youtube</a></li>
 	</ul>
 	<li>Links for Coding Turorials & Examples</li>

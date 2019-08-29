@@ -2,34 +2,32 @@
 
 <h2>Coding Documentation</h2>
 <ul>
-	<li>1</li>
+	<li>Log overall program documentation here.</li>
 	<ul>
-		<li><a href="#">1</a></li>
+		<li><a href="#">I will update the layout of our documentation file as we go along to look better than just lists.</a></li>
 	</ul>
-	<li>2</li>
+	<li>I will update documentation as I develop python code.</li>
 	<ul>
-		<li><a href="#">1</a></li>
+		<li><a href="#">Once I have commited a few changes you all should see the gist of how we document.</a></li>
 	</ul>
-	<li>3</li>
+	<li>These lists and sublists are just placeholders for the moment. Creating the layout.</li>
 </ul>
 
 <h2>Change Log</h2>
 <ul>
-	<li>Log your time and file changes here.</li>
+	<li>Brandon</li>
 	<ul>
-		<li><a href="#">Brandon</a></li>
-		<ul>
-			<li><a href="#">8-28-19 README.md files and initial folders.</a></li>
-		</ul>
+		<li><a href="#">8-29-19 Initial Python modules</a></li>
+		<li><a href="#">8-28-19 README.md files and initial folders.</a></li>		
 	</ul>
-	<li>2</li>
+	<li>Conner</li>
 	<ul>
-		<li><a href="#">Conner</a></li>
-	</ul>
+		<li><a href="#">First Change</a></li>
+	</ul>	
+	<li>Josh</li>
 	<ul>
-		<li><a href="#">Josh</a></li>
-	</ul>
-	<li>3</li>
+		<li><a href="#">First Change</a></li>
+	</ul>	
 </ul>
 
 

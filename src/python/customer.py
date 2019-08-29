@@ -1,5 +1,5 @@
 # customer.py
-# simulation of a bank teller
+# customer class
 class Customer:
     def __init__(self, name, uname, pword, balance):
         self.name = name
@@ -15,22 +15,25 @@ class Customer:
         print("Your balance is ", self.balance, " after deposit.")
     def checkBalance(self):
         print("Your balance is ", self.balance)
-    def toString(obj):
-        print("Hello " + obj.name)
-        print("Your username is " + obj.uname)
-        print("Your password is " + obj.pword)
-        print("Your balance is " + obj.balance)
+    def toString(self):
+        print("Hello ", self.name)
+        print("Your username is ", self.uname)
+        print("Your password is ", self.pword)
+        print("Your balance is ", self.balance)
 
 def main():
     customer1 = Customer("Brandon", "bhrowe", "pword", 1000.00)
     customer1.deposit(100)
     customer1.withdraw(150)
+    customer1.toString()
     customer2 = Customer("Conner", "conmur", "pword1", 2000.00)
     customer2.deposit(100)
     customer2.withdraw(150)
+    customer2.toString()
     customer3 = Customer("Josh", "jhow", "pword2", 3000.00)
     customer3.deposit(100)
     customer3.withdraw(150)
+    customer3.toString()
 
 if __name__ == "__main__":
     main()

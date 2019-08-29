@@ -47,12 +47,12 @@ def accountFunc(uname, pword):
     balance = 0.00
     print("Hello ", uname)
     command = input("What would you like to do today? (Deposit(D/d), Withdraw(W/w), or Check Balance(C/c)) ")
-    if command == "D" or "d":
+    if command == "D" or command == "d":
         depAmt = float(input("How much would you like to deposit? "))
         balance = deposit(depAmt, balance)
         print("Your balance after deposit is: ", balance)
-    elif command == "W" or "w":
-        witAmt = float(input("How much would you like to deposit? "))
+    elif command == "W" or command == "w":
+        witAmt = float(input("How much would you like to withdraw? "))
         balance = withdraw(witAmt, balance)
         print("Your balance after withdraw is: ", balance)
     else:

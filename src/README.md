@@ -31,4 +31,7 @@
 	</ul>	
 </ul>
 
+<h2>Links</h2>
+<a href="https://www.digitalocean.com/community/tutorials/how-to-construct-classes-and-define-objects-in-python-3">Python Classes</a>
+
 

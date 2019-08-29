@@ -8,7 +8,7 @@ def printIntro():
     print()
     print("Hello, welcome to your bank teller. ")
     print()
-    x = input("Are you a current customer? ")
+    x = input("Are you a current customer? (Y/N or y/n) ")
     if x == "Y" or x == "y":
         login()
     else:
@@ -29,9 +29,17 @@ def newCustomer():
     newCredCheck(uname, pword)
 
 def credCheck(uname, pword):
+    #This is where we would have some kind of database check for the credentials.
+    if uname == uname:
+        if pword == pword:
+            print("Success")
 
 
 def newCredCheck(uname, pword):
+    #This is where we would have some kind of database check for the credentials.
+    if uname == uname:
+        if pword == pword:
+            print("Success")
 
 
 if __name__ == '__main__': main()

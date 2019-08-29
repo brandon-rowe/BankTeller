@@ -9,6 +9,7 @@
 	<li>I will update documentation as I develop python code.</li>
 	<ul>
 		<li><a href="#">Once I have commited a few changes you all should see the gist of how we document.</a></li>
+		<li>I have added the first python file, teller.py. This is just to show you guys how python works a little and give us a starting point.</li>
 	</ul>
 	<li>These lists and sublists are just placeholders for the moment. Creating the layout.</li>
 </ul>

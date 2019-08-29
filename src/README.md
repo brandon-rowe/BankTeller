@@ -27,7 +27,7 @@
 	</ul>	
 	<li>Josh</li>
 	<ul>
-		<li>>First Change</li>
+		<li>First Change</li>
 	</ul>	
 </ul>
 

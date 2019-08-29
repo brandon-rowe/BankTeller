@@ -44,7 +44,9 @@
 <ul>
 	<li>Collection of Thoughts</li>
 	<ul>
-		<li>It looks like we will have to program it in Python. Most resources are for python dev.</li>
+		<li>Conner has found some resources to develop in Java. </li>
+		<li>We will use a few tools to load the program onto the raspi.</li>
+		<li>Conner, please share any links that you find useful to guide our development.</li>
 	</ul>
 	<li>Propose Changes</li>
 	<li>Log Completed and Next Steps</li>

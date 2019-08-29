@@ -18,7 +18,7 @@
 <ul>
 	<li>Brandon</li>
 	<ul>
-		<li>>8-29-19 Initial Python modules</li>
+		<li>8-29-19 Initial Python modules</li>
 		<li>8-28-19 README.md files and initial folders.</li>		
 	</ul>
 	<li>Conner</li>

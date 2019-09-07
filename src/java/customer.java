@@ -19,20 +19,20 @@ public class customer
    
    public double deposit(double amt)
    {
-      this.balance += amt;
+      balance += amt;
       return balance;
    }
    
    public double withdraw(double amt)
    {
-      this.balance -= amt;
+      balance -= amt;
       return balance;
    }
    
    
    public double getBalance()
    {
-      return this.balance;
+      return balance;
    }
    
 }

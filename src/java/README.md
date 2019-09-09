@@ -17,8 +17,7 @@
                     <li>Edited driver class</li>
                     <li>added Customer 1 password reset example</li>
                 </ul>	
-		</ul>    
-                       
+		</ul>      
 	<li>Brandon<li>
             <ul>
             	<li>9-5-19</li>
@@ -30,15 +29,12 @@
                     <li>Created driver class</li>
                     <li>Initialized customer objects (three customers)</li>
                     <li>Tested driver with methods</li>
-                </ul>
-	
-			
+                </ul>			
 				<li>8-29-19</li>
 				<ul>
 				 	<li>README.md files and initial folders.</li>	
 				</ul>	
 			</ul>
-	
 	<li>Josh</li>
 	<ul>
 		<li>First Change</li>

@@ -18,7 +18,7 @@
                     <li>added Customer 1 password reset example</li>
                 </ul>	
 		</ul>      
-	<li>Brandon<li>
+	<li>Brandon</li>
             <ul>
             	<li>9-5-19</li>
             	<ul> 

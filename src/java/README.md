@@ -3,37 +3,42 @@
 <h2>Coding Documentation</h2>
 <ul>
 	<li>Log overall program documentation here.</li>
-	<li>I will update the layout of our documentation file as we go along to look better than just lists.</li>
-	<li>These lists and sublists are just placeholders for the moment. Creating the layout.</li>
 </ul>
 
 <h2>Change Log</h2>
 <ul>
 	<li>Conner</li>
-	    9-8-19 customer class
-                      added Reset Password
-                      added Get Password
-                   driver class
-                       added Customer 1 password reset example
+		<ul>
+            	<li>9-8-19</li>
+            	<ul> 
+            		<li>Edited Customer Class</li>
+                    <li>Added Password Reset Method</li>
+                    <li>Added Get Password Method</li>
+                    <li>Edited driver class</li>
+                    <li>added Customer 1 password reset example</li>
+                </ul>	
+		</ul>    
+                       
 	<li>Brandon<li>
-            9-6-19 Created customer class
-                       Initialized Variables
-                       Constructor
-                       Deposit
-                       Withdraw
-                       Get Balance
-                    Created driver class
-                       Initialized Variables
-                       Initialized customer objects (three customers)
-                       added Customer1, Customer2, Customer3 address fetching, withdraw and deposits examples
-	<li>Brandon</li>
-	<ul>		
-		<li>8-29-19 README.md files and initial folders.</li>		
-	</ul>
-	<li>Conner</li>
-	<ul>
-		<li>First Change</li>
-	</ul>	
+            <ul>
+            	<li>9-5-19</li>
+            	<ul> 
+            		<li>Created customer class</li>
+                    <li>Initialized Variables</li>
+                    <li>Constructor</li>
+                    <li>Deposit, Withdraw, Get Balance Methods</li>
+                    <li>Created driver class</li>
+                    <li>Initialized customer objects (three customers)</li>
+                    <li>Tested driver with methods</li>
+                </ul>
+	
+			
+				<li>8-29-19</li>
+				<ul>
+				 	<li>README.md files and initial folders.</li>	
+				</ul>	
+			</ul>
+	
 	<li>Josh</li>
 	<ul>
 		<li>First Change</li>

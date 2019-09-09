@@ -9,6 +9,23 @@
 
 <h2>Change Log</h2>
 <ul>
+	<li>Conner</li>
+	    9-8-19 customer class
+                      added Reset Password
+                      added Get Password
+                   driver class
+                       added Customer 1 password reset example
+	<li>Brandon<li>
+            9-6-19 Created customer class
+                       Initialized Variables
+                       Constructor
+                       Deposit
+                       Withdraw
+                       Get Balance
+                    Created driver class
+                       Initialized Variables
+                       Initialized customer objects (three customers)
+                       added Customer1, Customer2, Customer3 address fetching, withdraw and deposits examples
 	<li>Brandon</li>
 	<ul>		
 		<li>8-29-19 README.md files and initial folders.</li>		

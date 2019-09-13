@@ -20,7 +20,7 @@
 		</ul>      
 	<li>Brandon</li>
         <ul>
-		<li>8-29-19</li>
+		<li>9-13-19</li>
 		<ul>
 			<li>Removed initial python code</li>
 			<li>Updated folder structure</li>

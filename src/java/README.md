@@ -37,7 +37,14 @@
 			</ul>
 	<li>Josh</li>
 	<ul>
-		<li>First Change</li>
+		<li>9-13-19</li>
+		<ul>
+			<li>Started employee class</li>
+			<li>Started Database</li>
+			<li>Added employee creation</li>
+			<li>Added automatic employee ID generation</li>
+			<li>Started on reading employee files</li>
+		</ul>
 	</ul>	
 </ul>
 

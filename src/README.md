@@ -19,22 +19,28 @@
                 </ul>	
 		</ul>      
 	<li>Brandon</li>
-            <ul>
+        <ul>
+		<li>8-29-19</li>
+		<ul>
+			<li>Removed initial python code</li>
+			<li>Updated folder structure</li>
+			<li>Review updated code from team</li>	
+		</ul>	
             	<li>9-5-19</li>
             	<ul> 
             		<li>Created customer class</li>
-                    <li>Initialized Variables</li>
-                    <li>Constructor</li>
-                    <li>Deposit, Withdraw, Get Balance Methods</li>
-                    <li>Created driver class</li>
-                    <li>Initialized customer objects (three customers)</li>
-                    <li>Tested driver with methods</li>
+                    	<li>Initialized Variables</li>
+                    	<li>Constructor</li>
+                    	<li>Deposit, Withdraw, Get Balance Methods</li>
+                    	<li>Created driver class</li>
+                    	<li>Initialized customer objects (three customers)</li>
+                    	<li>Tested driver with methods</li>
                 </ul>			
-				<li>8-29-19</li>
-				<ul>
-				 	<li>README.md files and initial folders.</li>	
-				</ul>	
-			</ul>
+		<li>8-29-19</li>
+		<ul>
+			 <li>README.md files and initial folders.</li>	
+		</ul>	
+	</ul>
 	<li>Josh</li>
 	<ul>
 		<li>9-13-19</li>

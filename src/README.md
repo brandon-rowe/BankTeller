@@ -43,6 +43,13 @@
 	</ul>
 	<li>Josh</li>
 	<ul>
+		<li>10-4-19</li>
+		<ul>
+			<li>Added login functionality</li>
+			<li>Updated employee file handling</li>
+			<li>Changed database labling for Employee vs Customer</li>
+			<li>Started writing funtions for Employee control</li>
+		</ul>
 		<li>9-13-19</li>
 		<ul>
 			<li>Started employee class</li>

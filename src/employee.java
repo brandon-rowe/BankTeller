@@ -5,25 +5,23 @@ import java.io.*;
 
 public class employee
 {
-	int password;
-	String fname, lname, address;
+	String fname, lname, address,password;
 
-	public employee(String employeeNumber, int pass)
+	public employee(String password, String fname, String lname, String address)
 	{
-		try
-		{
-			
-		} 
-		catch (Exception e)
-		{
-			System.out.println("Error: " + e);
-		} 
-		finally
-		{
-			//scanner.close();
-		}
+		password = password;
+		fname = fname;
+		lname = lname;
+		address = address;
+		
+		menu();
 	}
 
+	private static void menu()
+	{
+		System.out.println("Testing");
+	}
+	
 	private void createCustomer(String fname, String lname, String password, String address)
 	{
 	}

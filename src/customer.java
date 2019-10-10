@@ -5,16 +5,17 @@ import java.lang.*;
 public class customer
 {
 	long id;
-	String password, fname, lname, address;
+	String password, fname, lname, address, phoneNumber;
 	double balance;
 
-	public customer(String fname, String lname, long id, String password, String address, double balance)
+	public customer(String fname, String lname, long id, String password, String address, String phoneNumber, double balance)
 	{
 		this.fname = fname;
 		this.lname = lname;
 		this.id = id;
 		this.password = password;
 		this.address = address;
+		this.phoneNumber = phoneNumber;
 		this.balance = balance;
 	}
 
@@ -48,6 +49,11 @@ public class customer
 	public String getPassword()
 	{
 		return password;
+	}
+	
+	public void changeContact(String address, String phoneNumber) {
+		this.address = address;
+		this.phoneNumber = phoneNumber;
 	}
 
 }

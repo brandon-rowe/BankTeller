@@ -8,16 +8,21 @@
 <h2>Change Log</h2>
 <ul>
 	<li>Conner</li>
-		<ul>
-            	<li>9-8-19</li>
-            	<ul> 
-            		<li>Edited Customer Class</li>
-                    <li>Added Password Reset Method</li>
-                    <li>Added Get Password Method</li>
-                    <li>Edited driver class</li>
-                    <li>added Customer 1 password reset example</li>
-                </ul>	
-		</ul>      
+	<ul>
+		<li>10-9-19</li>
+		<ul> 
+		    	<li>Added Phone Number Parameter to Customer Class</li>
+		    	<li>Added changeContact function (address, phoneNumber)</li>
+		</ul>	
+		<li>9-8-19</li>
+		<ul> 
+		    	<li>Edited Customer Class</li>
+		    	<li>Added Password Reset Method</li>
+		    	<li>Added Get Password Method</li>
+		    	<li>Edited driver class</li>
+		    	<li>added Customer 1 password reset example</li>
+		</ul>	
+	</ul>      
 	<li>Brandon</li>
         <ul>
 		<li>9-13-19</li>

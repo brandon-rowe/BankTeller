@@ -63,6 +63,12 @@
 			<li>Added automatic employee ID generation</li>
 			<li>Started on reading employee files</li>
 		</ul>
+		<li>11-13-19</li>
+		<ul>
+			<li>Added Customer Creation</li>
+			<li>Started Employee Menu</li>
+			<li>Other bug fixes and code tweaks</li>
+		</ul>
 	</ul>	
 </ul>
 

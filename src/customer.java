@@ -4,16 +4,14 @@ import java.lang.*;
 
 public class customer
 {
-	long id;
 	String password, fname, lname, address, phoneNumber;
 	double balance;
 
-	public customer(String fname, String lname, long id, String password, String address, String phoneNumber, double balance)
+	public customer(String fname, String lname, String password, String address, String phoneNumber, double balance)
 	{
+		this.password = password;
 		this.fname = fname;
 		this.lname = lname;
-		this.id = id;
-		this.password = password;
 		this.address = address;
 		this.phoneNumber = phoneNumber;
 		this.balance = balance;

@@ -15,11 +15,11 @@ public class driver
 	{
 		scanner = null;
 		
-		//-------This is to bypass DB select and login. For testing past login--------
+		/*//-------This is to bypass DB select and login. For testing past login--------
 		//-------Uncomment next three lines. Change dirctory to your local DB location
 		directory = "E:/Users/Tater/Documents/Git/BankTeller/src";
 		quickLoadEmployee("E1000");
-		System.exit(0);
+		System.exit(0);*/
 
 		try
 		{
@@ -70,7 +70,11 @@ public class driver
 		System.out.print("Password: ");
 		int password = scanner.next().hashCode();
 
-		if (user.charAt(0) == 'E')
+		if (user.length() >= 6 && user.charAt(5) == '-')
+		{
+			System.out.println("Invalid user/password\n");
+		}
+		else if (user.charAt(0) == 'E')
 		{
 			try
 			{
@@ -89,9 +93,24 @@ public class driver
 				System.out.println("Invalid user/password\n");
 			}
 		}
-		else if (user.charAt(0) == 'U')
+		else if (user.charAt(0) == 'C')
 		{
-			// TODO
+			try
+			{
+				scanner = new Scanner(new File(directory + "/Database/customer/" + user + ".txt"));
+
+				if (scanner.nextLine().equals(Integer.toString(password)))
+				{
+					System.out.println();
+					loadCustomer(user);
+				} else
+					System.out.println("Invalide user/password");
+
+				scanner = new Scanner(System.in);
+			} catch (Exception e)
+			{
+				System.out.println("Invalid user/password\n");
+			}
 		}
 		else
 			System.out.println("Invalid user/password\n");
@@ -104,9 +123,12 @@ public class driver
 		employee = null;
 	}
 
-	private static void loadCustomer(String user, String directory)
+	private static void loadCustomer(String user) throws IOException
 	{
-		// TODO
+		scanner = new Scanner(new File(directory + "/Database/customer/" + user + ".txt"));
+		customer customer = new customer(scanner.nextLine(), scanner.nextLine(), scanner.nextLine(), scanner.nextLine(),
+				scanner.nextLine(), Double.valueOf(scanner.nextLine()), user, directory, true);
+		customer = null;
 	}
 
 	// this creates an employee .txt file in the database and increments the employee counter

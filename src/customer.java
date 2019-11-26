@@ -4,10 +4,11 @@ import java.lang.*;
 
 public class customer
 {
-	String password, fname, lname, address, phoneNumber;
+	String password, fname, lname, address, phoneNumber, userID;
+	static String directory;
 	double balance;
 
-	public customer(String fname, String lname, String password, String address, String phoneNumber, double balance)
+	public customer(String password, String fname, String lname, String address, String phoneNumber, double balance, String userID, String directory, boolean menu)
 	{
 		this.password = password;
 		this.fname = fname;
@@ -15,7 +16,22 @@ public class customer
 		this.address = address;
 		this.phoneNumber = phoneNumber;
 		this.balance = balance;
+		this.userID = userID;
+		customer.directory = directory;
+		
+		if (menu == true)
+			menu();
 	}
+	
+	
+
+	private void menu()
+	{
+		// TODO
+		
+	}
+
+
 
 	public double deposit(double amt)
 	{
@@ -44,12 +60,8 @@ public class customer
 		return true;
 	}
 
-	public String getPassword()
+	public void changeContact(String address, String phoneNumber)
 	{
-		return password;
-	}
-	
-	public void changeContact(String address, String phoneNumber) {
 		this.address = address;
 		this.phoneNumber = phoneNumber;
 	}

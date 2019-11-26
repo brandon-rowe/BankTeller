@@ -6,6 +6,7 @@ import java.io.*;
 public class employee
 {
 	String fname, lname, address, password;
+	customer customer;
 	static String directory;
 	static Scanner scanner;
 
@@ -20,7 +21,7 @@ public class employee
 		menu();
 	}
 
-	private static void menu() throws IOException
+	private void menu() throws IOException
 	{
 		String command = "";
 
@@ -29,22 +30,96 @@ public class employee
 			scanner = new Scanner(System.in);
 
 			System.out.println("What would you like to do?");
-			System.out.println("1: Create Customer");
+			System.out.println("1: Customer Select");
+			System.out.println("2: Customer Deposit");
+			System.out.println("3: Customer Withdraw");
+			System.out.println("4: Customer Balance");
+			System.out.println("5: Customer History");
+			System.out.println("6: Create Customer");
+			System.out.println("7: Delete Customer");
 			System.out.println("0: Exit");
 
-			switch (scanner.next())
+			switch (scanner.nextLine())
 			{
 			case "1":
 				System.out.println();
+				selectCustomer();
+				break;
+			case "2":
+				if (customer == null)
+				{
+					System.out.println("Select Customer");
+					break;
+				}
+				else
+					// TODO
+					break;
+			case "3":
+				if (customer == null)
+				{
+					System.out.println("Select Customer");
+					break;
+				}
+				else
+					// TODO
+					break;
+			case "4":
+				if (customer == null)
+				{
+					System.out.println("Select Customer");
+					break;
+				}
+				else
+					// TODO
+					break;
+			case "5":
+				if (customer == null)
+				{
+					System.out.println("Select Customer");
+					break;
+				}
+				else
+					// TODO
+					break;
+			case "6":
+				System.out.println();
 				createCustomerPrompt();
+				break;
+			case "7":
+				System.out.println();
+				deleteCustomer();
+				break;
+			case "11":
+				readCustomer("C1000");
 				break;
 			case "0":
 				command = "logout";
 				break;
 			}
-
+			
 			System.out.println();
 		}
+
+		customer = null;
+	}
+
+	private void selectCustomer()
+	{
+		System.out.println("Enter user ID");
+		String userID = scanner.nextLine();
+
+		try
+		{
+			scanner = new Scanner(new File(directory + "/Database/customer/" + userID + ".txt"));
+			customer = new customer(scanner.nextLine(), scanner.nextLine(), scanner.nextLine(), scanner.nextLine(),
+					scanner.nextLine(), Double.valueOf(scanner.nextLine()), userID, directory, false);
+
+		}
+		catch (FileNotFoundException e)
+		{
+			System.out.println("Customer ID Invalid");
+		}
+		System.out.println(customer);
 	}
 
 	private static void createCustomerPrompt() throws IOException
@@ -52,14 +127,14 @@ public class employee
 		System.out.print("First Name: ");
 		String cfname = scanner.next();
 		scanner.nextLine();
-		
+
 		System.out.print("Last Name: ");
 		String clname = scanner.next();
 		scanner.nextLine();
-		
+
 		System.out.print("Address: ");
 		String caddress = scanner.nextLine();
-		
+
 		System.out.print("Phone: ");
 		String cphone = scanner.next();
 		scanner.nextLine();
@@ -79,12 +154,14 @@ public class employee
 		FileWriter filewriter = new FileWriter(directory + "/Database/customer/" + "C" + scanner.nextInt() + ".txt");
 		PrintWriter printwriter = new PrintWriter(filewriter);
 
-		printwriter.println(first + last);
+		printwriter.println((first + last).hashCode());
 		printwriter.println(first);
 		printwriter.println(last);
 		printwriter.println(address);
 		printwriter.println(phone);
 		printwriter.println(balance);
+		printwriter.println();
+		printwriter.println("********************");
 
 		filewriter.flush();
 		printwriter.flush();
@@ -104,5 +181,27 @@ public class employee
 
 		printwriter.close();
 		filewriter.close();
+	}
+
+	private static void deleteCustomer()
+	{
+		System.out.println("Please enter User ID to delete: ");
+		String userID = scanner.next();
+
+		File oldFile = new File(directory + "/Database/customer/" + userID + ".txt");
+		File newFile = new File(directory + "/Database/customer/" + userID + "-deleted.txt");
+
+		if (oldFile.renameTo(newFile))
+			System.out.println("User Deleted");
+		else
+			System.out.println("Deletion Failed");
+	}
+
+	// Testing+++++++++++++++++++++++++++++++++++++++
+	private static void readCustomer(String userID) throws FileNotFoundException
+	{
+		scanner = new Scanner(new File(directory + "/Database/customer/" + userID + ".txt"));
+		while (scanner.hasNext())
+			System.out.println(scanner.nextLine());
 	}
 }

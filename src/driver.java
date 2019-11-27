@@ -20,6 +20,12 @@ public class driver
 		directory = "E:/Users/Tater/Documents/Git/BankTeller/src";
 		quickLoadEmployee("E1000");
 		System.exit(0);*/
+		
+		/*//-------This is to bypass DB select and login. For testing past login--------
+		//-------Uncomment next three lines. Change dirctory to your local DB location
+		directory = "E:/Users/Tater/Documents/Git/BankTeller/src";
+		quickLoadCustomer("C1000");
+		System.exit(0);*/
 
 		try
 		{
@@ -83,6 +89,7 @@ public class driver
 				if (scanner.nextLine().equals(Integer.toString(password)))
 				{
 					System.out.println();
+					scanner.close();
 					loadEmployee(user);
 				} else
 					System.out.println("Invalide user/password");
@@ -102,6 +109,7 @@ public class driver
 				if (scanner.nextLine().equals(Integer.toString(password)))
 				{
 					System.out.println();
+					scanner.close();
 					loadCustomer(user);
 				} else
 					System.out.println("Invalide user/password");
@@ -172,5 +180,12 @@ public class driver
 		scanner = new Scanner(new File("E:/Users/Tater/Documents/Git/BankTeller/src/Database/employee/" + user + ".txt"));
 		employee employee = new employee(scanner.nextLine(), scanner.nextLine(), scanner.nextLine(),scanner.nextLine(), directory);
 		employee = null;
+	}
+	private static void quickLoadCustomer(String user) throws IOException
+	{
+		scanner = new Scanner(new File("E:/Users/Tater/Documents/Git/BankTeller/src/Database/customer/" + user + ".txt"));
+		customer customer = new customer(scanner.nextLine(), scanner.nextLine(), scanner.nextLine(), scanner.nextLine(),
+				scanner.nextLine(), Double.valueOf(scanner.nextLine()), user, directory, true);
+		customer = null;
 	}
 }

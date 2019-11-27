@@ -3,6 +3,9 @@ import javax.swing.JFileChooser;
 import java.lang.*;
 import java.io.*;
 
+/*
+ * Fix deletion of customer when customer is selected. Will not delete do to open stream.
+ */
 public class employee
 {
 	String fname, lname, address, password;
@@ -103,7 +106,7 @@ public class employee
 		customer = null;
 	}
 
-	private void selectCustomer()
+	private void selectCustomer() throws IOException
 	{
 		System.out.println("Enter user ID");
 		String userID = scanner.nextLine();

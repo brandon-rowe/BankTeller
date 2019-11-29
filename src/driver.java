@@ -15,9 +15,9 @@ public class driver
 	{
 		scanner = null;
 		
-		/*//-------This is to bypass DB select and login. For testing past login--------
+		//-------This is to bypass DB select and login. For testing past login--------
 		//-------Uncomment next three lines. Change dirctory to your local DB location
-		directory = "E:/Users/Tater/Documents/Git/BankTeller/src";
+		/*directory = "E:/Users/Tater/Documents/Git/BankTeller/src";
 		quickLoadEmployee("E1000");
 		System.exit(0);*/
 		

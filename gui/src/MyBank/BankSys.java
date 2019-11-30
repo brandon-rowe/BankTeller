@@ -310,7 +310,7 @@ class BankSystemPvt implements ActionListener{
 				}
 				else
 				{
-					JOptionPane.showMessageDialog(frmacc, "Min Balence must be 2000");
+					JOptionPane.showMessageDialog(frmacc, "Min Balance must be 2000");
 				}
 
 			}
@@ -325,7 +325,7 @@ class BankSystemPvt implements ActionListener{
 				}
 				else
 				{
-					JOptionPane.showMessageDialog(frmacc, "Min Balence must be 5000");
+					JOptionPane.showMessageDialog(frmacc, "Min Balance must be 5000");
 				}
 
 			}

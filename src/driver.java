@@ -92,7 +92,7 @@ public class driver
 					scanner.close();
 					loadEmployee(user);
 				} else
-					System.out.println("Invalide user/password");
+					System.out.println("Invalid user/password");
 
 				scanner = new Scanner(System.in);
 			} catch (Exception e)

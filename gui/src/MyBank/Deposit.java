@@ -57,7 +57,7 @@ public class Deposit implements ActionListener {
 		btd=new JButton("Ok");
 		pnld.add(btd);
 		btd.addActionListener(this);
-		lb.setText("Deposit is processing...");
+		lb.setText("Deposit is Processing...");
 	}
 
 	@Override

@@ -29,7 +29,8 @@ import javax.swing.JTextField;
 import javax.swing.SwingUtilities;
 
 class BankSystemPvt implements ActionListener{
-	RandomAccessFile file;
+	
+   RandomAccessFile file;
 	DataInputStream din;
 	DataOutputStream dout;
 	JFrame bank;
@@ -134,7 +135,6 @@ class BankSystemPvt implements ActionListener{
 
 
 	public void actionPerformed(ActionEvent e) {
-		// TODO Auto-generated method stub
 		
 		if(e.getSource()==about)
 		{
@@ -147,15 +147,15 @@ class BankSystemPvt implements ActionListener{
 			JOptionPane.showMessageDialog(bank, "Banking System by BCJ"+"\nUSC 4th Year CS.");
 		}
 		
-		if(e.getSource()==newac)
+		/*if(e.getSource()==newac)
 		{
 			newAcc();
 			//lb.setText("New Account Registration is Going on...");
-		}
+		}*/
 		if(e.getSource()==newacc)
 		{
 			newAcc();
-			//lb.setText("New Account Registration is Going on...");
+			lb.setText("New Account Registration is Going on...");
 		}
 
 		if(e.getSource()==withdraw)
@@ -183,7 +183,6 @@ class BankSystemPvt implements ActionListener{
 			try {
 				view();
 			} catch (IOException e1) {
-				// TODO Auto-generated catch block
 				e1.printStackTrace();
 			}
 		}
@@ -204,14 +203,10 @@ class BankSystemPvt implements ActionListener{
 			frmacc.dispose();
 			lb.setText("New Account Registration is Completed.");
 		}
-
-
-
 	}
 
 
 	private void view() throws IOException {
-		// TODO Auto-generated method stub
 
 		frmv=new JFrame("#Customer Records#");
 		frmv.setSize(600,350);
@@ -242,14 +237,12 @@ class BankSystemPvt implements ActionListener{
 				{
 					eof=true;
 				} catch (IOException e) {
-					// TODO Auto-generated catch block
 					e.printStackTrace();
 				}
 			}
 
 			din.close();
 		} catch (FileNotFoundException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 
@@ -263,7 +256,6 @@ class BankSystemPvt implements ActionListener{
 
 
 	private void newAcc() {
-		// TODO Auto-generated method stub
 		frmacc=new JFrame("New Account");
 		frmacc.setSize(450,150);
 		frmacc.setVisible(true);
@@ -283,12 +275,11 @@ class BankSystemPvt implements ActionListener{
 		pnlacc.add(btacc);
 
 		btacc.addActionListener(this);
-		lb.setText("New Account Registration is Going on...");
+		lb.setText("New Account Registration is Processing...");
 
 	}
 
 	private void accCreate() {
-		// TODO Auto-generated method stub
 		try {
 			file=new RandomAccessFile("BankSystem.txt","rw");
 			file.seek(file.length());
@@ -300,7 +291,7 @@ class BankSystemPvt implements ActionListener{
 			String ty=tft.getText();
 			if(ty.equals("Savings"))
 			{
-				if(Double.parseDouble(bal)>2000){
+				if(Double.parseDouble(bal)>500){
 					file.writeUTF(acc);
 					file.writeUTF(name);
 					file.writeUTF(bal);
@@ -310,13 +301,13 @@ class BankSystemPvt implements ActionListener{
 				}
 				else
 				{
-					JOptionPane.showMessageDialog(frmacc, "Min Balance must be 2000");
+					JOptionPane.showMessageDialog(frmacc, "Min Balance must be 500");
 				}
 
 			}
-			else if(ty.equals("Current"))
+			else if(ty.equals("Checking"))
 			{
-				if(Double.parseDouble(bal)>5000){
+				if(Double.parseDouble(bal)>200){
 					file.writeUTF(acc);
 					file.writeUTF(name);
 					file.writeUTF(bal);
@@ -325,7 +316,7 @@ class BankSystemPvt implements ActionListener{
 				}
 				else
 				{
-					JOptionPane.showMessageDialog(frmacc, "Min Balance must be 5000");
+					JOptionPane.showMessageDialog(frmacc, "Min Balance must be 200");
 				}
 
 			}
@@ -336,10 +327,8 @@ class BankSystemPvt implements ActionListener{
 
 
 		} catch (FileNotFoundException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 	}
@@ -347,9 +336,6 @@ class BankSystemPvt implements ActionListener{
 
 
 public class BankSys {
-	/**
-	 * @param args
-	 */
 	
 	JFrame f;
 	public static void main(String[] args) throws IOException

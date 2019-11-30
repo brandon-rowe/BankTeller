@@ -160,22 +160,22 @@ class BankSystemPvt implements ActionListener{
 
 		if(e.getSource()==withdraw)
 		{
-			Withdraw wth = new Withdraw(frmacc,lb);
+			new Withdraw(frmacc,lb);
 		}
 
 		if(e.getSource()==deposit)
 		{
-			Deposit dpt = new Deposit(frmacc,lb);
+			new Deposit(frmacc,lb);
 		}
 
 		if(e.getSource()==search)
 		{
-			Search sch = new Search(frmacc,lb);
+			new Search(frmacc,lb);
 		}
 
 		if(e.getSource()==searchac)
 		{
-			Search sch = new Search(frmacc,lb);
+			new Search(frmacc,lb);
 		}
 
 		if(e.getSource()==view)

@@ -86,26 +86,26 @@ public class Withdraw implements ActionListener {
 				String ty=data[x][3];
 				if(ty.equals("Savings"))
 				{
-					if((bal-amt)>2000)
+					if((bal-amt)>500)
 					{
 						bal=bal-amt;
 					}
 					else
 					{
-						JOptionPane.showMessageDialog(frmacc, "Min Balance 2000. Withdraw cannot be completed");
+						JOptionPane.showMessageDialog(frmacc, "Min Balance 500. Withdraw cannot be completed");
 					}
 
 				}
-				else if(ty.equals("Current"))
+				else if(ty.equals("Checking"))
 				{
-					if((bal-amt)>5000)
+					if((bal-amt)>200)
 					{
 						bal=bal-amt;
 					}
 
 					else
 					{
-						JOptionPane.showMessageDialog(frmacc, "Min Balance 5000. Withdraw cannot be completed");
+						JOptionPane.showMessageDialog(frmacc, "Min Balance 200. Withdraw cannot be completed");
 					}
 				}
 

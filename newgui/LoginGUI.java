@@ -40,7 +40,7 @@ public class LoginGUI extends JFrame {
 	public LoginGUI() {
 		setResizable(false);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 377, 304);
+		setBounds(100, 100, 360, 274);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
@@ -53,10 +53,6 @@ public class LoginGUI extends JFrame {
 		});
 		btnLogin.setBounds(115, 188, 138, 23);
 		contentPane.add(btnLogin);
-		
-		JButton btnResetPassword = new JButton("Reset Password");
-		btnResetPassword.setBounds(115, 222, 138, 23);
-		contentPane.add(btnResetPassword);
 		
 		textField = new JTextField();
 		textField.setBounds(146, 114, 86, 20);

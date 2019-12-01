@@ -13,7 +13,7 @@ import javax.swing.JTextField;
 public class CustomerSelectorGUI extends JFrame {
 
 	private JPanel contentPane;
-	private JTextField textField;
+	private JTextField txtFieldCustomerID;
 
 	/**
 	 * Launch the application.
@@ -47,9 +47,9 @@ public class CustomerSelectorGUI extends JFrame {
 		lblSelectACustomer.setBounds(199, 38, 240, 24);
 		contentPane.add(lblSelectACustomer);
 		
-		JTextArea textArea = new JTextArea();
-		textArea.setBounds(84, 83, 384, 238);
-		contentPane.add(textArea);
+		JTextArea txtAreaCustomerList = new JTextArea();
+		txtAreaCustomerList.setBounds(84, 83, 384, 238);
+		contentPane.add(txtAreaCustomerList);
 		
 		JButton btnLogout = new JButton("Logout");
 		btnLogout.setBounds(10, 351, 89, 23);
@@ -59,14 +59,14 @@ public class CustomerSelectorGUI extends JFrame {
 		btnContinue.setBounds(439, 351, 89, 23);
 		contentPane.add(btnContinue);
 		
-		textField = new JTextField();
-		textField.setBounds(273, 341, 86, 24);
-		contentPane.add(textField);
-		textField.setColumns(10);
+		txtFieldCustomerID = new JTextField();
+		txtFieldCustomerID.setBounds(273, 341, 86, 24);
+		contentPane.add(txtFieldCustomerID);
+		txtFieldCustomerID.setColumns(10);
 		
-		JLabel lblId = new JLabel("Customer ID");
-		lblId.setFont(new Font("Tahoma", Font.BOLD, 12));
-		lblId.setBounds(177, 345, 168, 14);
-		contentPane.add(lblId);
+		JLabel lblCustomerID = new JLabel("Customer ID");
+		lblCustomerID.setFont(new Font("Tahoma", Font.BOLD, 12));
+		lblCustomerID.setBounds(177, 345, 168, 14);
+		contentPane.add(lblCustomerID);
 	}
 }

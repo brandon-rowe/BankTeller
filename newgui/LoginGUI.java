@@ -15,8 +15,8 @@ import javax.swing.JPasswordField;
 public class LoginGUI extends JFrame {
 
 	private JPanel contentPane;
-	private JTextField textField;
-	private JPasswordField passwordField;
+	private JTextField txtFieldUsername;
+	private JPasswordField txtFieldPassword;
 
 	/**
 	 * Launch the application.
@@ -54,10 +54,10 @@ public class LoginGUI extends JFrame {
 		btnLogin.setBounds(115, 188, 138, 23);
 		contentPane.add(btnLogin);
 		
-		textField = new JTextField();
-		textField.setBounds(146, 114, 86, 20);
-		contentPane.add(textField);
-		textField.setColumns(10);
+		txtFieldUsername = new JTextField();
+		txtFieldUsername.setBounds(146, 114, 86, 20);
+		contentPane.add(txtFieldUsername);
+		txtFieldUsername.setColumns(10);
 		
 		JLabel lblUserName = new JLabel("Username");
 		lblUserName.setBounds(69, 117, 81, 14);
@@ -67,13 +67,13 @@ public class LoginGUI extends JFrame {
 		lblPassword.setBounds(69, 151, 95, 14);
 		contentPane.add(lblPassword);
 		
-		JLabel lblBanktellerLogin = new JLabel("BankTeller Login");
-		lblBanktellerLogin.setFont(new Font("Tahoma", Font.BOLD, 16));
-		lblBanktellerLogin.setBounds(115, 57, 138, 23);
-		contentPane.add(lblBanktellerLogin);
+		JLabel lblBankTellerLogin = new JLabel("BankTeller Login");
+		lblBankTellerLogin.setFont(new Font("Tahoma", Font.BOLD, 16));
+		lblBankTellerLogin.setBounds(115, 57, 138, 23);
+		contentPane.add(lblBankTellerLogin);
 		
-		passwordField = new JPasswordField();
-		passwordField.setBounds(146, 148, 86, 20);
-		contentPane.add(passwordField);
+		txtFieldPassword = new JPasswordField();
+		txtFieldPassword.setBounds(146, 148, 86, 20);
+		contentPane.add(txtFieldPassword);
 	}
 }

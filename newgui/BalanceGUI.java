@@ -12,7 +12,7 @@ import javax.swing.JButton;
 public class BalanceGUI extends JFrame {
 
 	private JPanel contentPane;
-	private JTextField textField;
+	private JTextField txtFieldBalance;
 
 	/**
 	 * Launch the application.
@@ -46,14 +46,14 @@ public class BalanceGUI extends JFrame {
 		lblBalance.setBounds(60, 11, 182, 23);
 		contentPane.add(lblBalance);
 		
-		textField = new JTextField();
-		textField.setColumns(10);
-		textField.setBounds(50, 45, 86, 20);
-		contentPane.add(textField);
+		txtFieldBalance = new JTextField();
+		txtFieldBalance.setColumns(10);
+		txtFieldBalance.setBounds(50, 45, 86, 20);
+		contentPane.add(txtFieldBalance);
 		
-		JButton button = new JButton("Back");
-		button.setBounds(50, 80, 76, 23);
-		contentPane.add(button);
+		JButton btnBack = new JButton("Back");
+		btnBack.setBounds(50, 80, 76, 23);
+		contentPane.add(btnBack);
 	}
 
 }

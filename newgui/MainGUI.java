@@ -40,9 +40,9 @@ public class MainGUI extends JFrame {
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		
-		JButton btnWithdraw = new JButton("Withdraw & Deposit");
-		btnWithdraw.setBounds(188, 124, 218, 23);
-		contentPane.add(btnWithdraw);
+		JButton btnWithdrawDeposit = new JButton("Withdraw & Deposit");
+		btnWithdrawDeposit.setBounds(188, 124, 218, 23);
+		contentPane.add(btnWithdrawDeposit);
 		
 		JButton btnTransactionHistory = new JButton("Transaction History");
 		btnTransactionHistory.setBounds(188, 192, 218, 23);
@@ -56,10 +56,10 @@ public class MainGUI extends JFrame {
 		btnChangeContactInformation.setBounds(188, 226, 218, 23);
 		contentPane.add(btnChangeContactInformation);
 		
-		JLabel lblFunctions = new JLabel("Options");
-		lblFunctions.setFont(new Font("Tahoma", Font.BOLD, 18));
-		lblFunctions.setBounds(262, 84, 155, 29);
-		contentPane.add(lblFunctions);
+		JLabel lblOptions = new JLabel("Options");
+		lblOptions.setFont(new Font("Tahoma", Font.BOLD, 18));
+		lblOptions.setBounds(262, 84, 155, 29);
+		contentPane.add(lblOptions);
 		
 		JButton btnBack = new JButton("Back");
 		btnBack.setBounds(452, 342, 94, 23);

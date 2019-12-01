@@ -12,8 +12,8 @@ import javax.swing.JButton;
 public class ChangeOfContactGUI extends JFrame {
 
 	private JPanel contentPane;
-	private JTextField textField_1;
-	private JTextField textField_2;
+	private JTextField txtFieldAddress;
+	private JTextField txtFieldPhoneNumber;
 
 	/**
 	 * Launch the application.
@@ -52,26 +52,26 @@ public class ChangeOfContactGUI extends JFrame {
 		lblAddress.setBounds(68, 78, 108, 14);
 		contentPane.add(lblAddress);
 		
-		textField_1 = new JTextField();
-		textField_1.setColumns(10);
-		textField_1.setBounds(156, 75, 249, 20);
-		contentPane.add(textField_1);
+		txtFieldAddress = new JTextField();
+		txtFieldAddress.setColumns(10);
+		txtFieldAddress.setBounds(156, 75, 249, 20);
+		contentPane.add(txtFieldAddress);
 		
 		JLabel lblPhoneNumber = new JLabel("Phone Number");
 		lblPhoneNumber.setBounds(68, 113, 144, 14);
 		contentPane.add(lblPhoneNumber);
 		
-		textField_2 = new JTextField();
-		textField_2.setColumns(10);
-		textField_2.setBounds(156, 106, 249, 20);
-		contentPane.add(textField_2);
+		txtFieldPhoneNumber = new JTextField();
+		txtFieldPhoneNumber.setColumns(10);
+		txtFieldPhoneNumber.setBounds(156, 106, 249, 20);
+		contentPane.add(txtFieldPhoneNumber);
 		
 		JButton btnUpdate = new JButton("Update");
 		btnUpdate.setBounds(236, 150, 89, 23);
 		contentPane.add(btnUpdate);
 		
-		JButton button_1 = new JButton("Back");
-		button_1.setBounds(10, 11, 76, 23);
-		contentPane.add(button_1);
+		JButton btnBack = new JButton("Back");
+		btnBack.setBounds(10, 11, 76, 23);
+		contentPane.add(btnBack);
 	}
 }

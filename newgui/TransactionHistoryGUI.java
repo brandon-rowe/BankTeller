@@ -43,18 +43,18 @@ public class TransactionHistoryGUI extends JFrame {
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		
-		JTextArea txtrTextGoesHere = new JTextArea();
-		txtrTextGoesHere.setEditable(false);
-		txtrTextGoesHere.setBounds(90, 91, 323, 228);
-		contentPane.add(txtrTextGoesHere);
+		JTextArea txtAreaTransactionHistory = new JTextArea();
+		txtAreaTransactionHistory.setEditable(false);
+		txtAreaTransactionHistory.setBounds(90, 91, 323, 228);
+		contentPane.add(txtAreaTransactionHistory);
 		
 		JLabel lblTransactionHistory = new JLabel("Transaction History");
 		lblTransactionHistory.setFont(new Font("Tahoma", Font.BOLD, 14));
 		lblTransactionHistory.setBounds(176, 56, 184, 24);
 		contentPane.add(lblTransactionHistory);
 		
-		JButton button = new JButton("Back");
-		button.setBounds(10, 11, 68, 23);
-		contentPane.add(button);
+		JButton btnBack = new JButton("Back");
+		btnBack.setBounds(10, 11, 68, 23);
+		contentPane.add(btnBack);
 	}
 }

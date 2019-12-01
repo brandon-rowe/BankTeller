@@ -13,7 +13,6 @@ import javax.swing.JTextField;
 public class WithdrawDepositGUI extends JFrame {
 
 	private JPanel contentPane;
-	private JTextField textField;
 	private JTextField textField_1;
 
 	/**
@@ -45,15 +44,15 @@ public class WithdrawDepositGUI extends JFrame {
 		contentPane.setLayout(null);
 		
 		JButton btnNewButton = new JButton("Withdraw");
-		btnNewButton.setBounds(124, 139, 89, 23);
+		btnNewButton.setBounds(124, 112, 89, 23);
 		contentPane.add(btnNewButton);
 		
 		JButton btnDeposit = new JButton("Deposit");
-		btnDeposit.setBounds(124, 173, 89, 23);
+		btnDeposit.setBounds(124, 149, 89, 23);
 		contentPane.add(btnDeposit);
 		
 		JLabel lblAmount = new JLabel("Amount");
-		lblAmount.setBounds(58, 114, 89, 14);
+		lblAmount.setBounds(59, 73, 89, 14);
 		contentPane.add(lblAmount);
 		
 		JLabel lblWithdrawDepsoit = new JLabel("Withdraw & Deposit");
@@ -61,18 +60,9 @@ public class WithdrawDepositGUI extends JFrame {
 		lblWithdrawDepsoit.setBounds(98, 26, 182, 23);
 		contentPane.add(lblWithdrawDepsoit);
 		
-		JLabel lblAccount = new JLabel("Account #");
-		lblAccount.setBounds(58, 77, 89, 14);
-		contentPane.add(lblAccount);
-		
-		textField = new JTextField();
-		textField.setBounds(127, 74, 86, 20);
-		contentPane.add(textField);
-		textField.setColumns(10);
-		
 		textField_1 = new JTextField();
 		textField_1.setColumns(10);
-		textField_1.setBounds(127, 111, 86, 20);
+		textField_1.setBounds(124, 70, 86, 20);
 		contentPane.add(textField_1);
 		
 		JButton button = new JButton("Back");

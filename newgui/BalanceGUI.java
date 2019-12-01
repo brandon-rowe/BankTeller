@@ -4,16 +4,15 @@ import java.awt.EventQueue;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
-import javax.swing.JTextArea;
 import javax.swing.JLabel;
-import javax.swing.JButton;
-import javax.swing.JTextField;
-import javax.swing.JScrollPane;
 import java.awt.Font;
+import javax.swing.JTextField;
+import javax.swing.JButton;
 
-public class TransactionHistoryGUI extends JFrame {
+public class BalanceGUI extends JFrame {
 
 	private JPanel contentPane;
+	private JTextField textField;
 
 	/**
 	 * Launch the application.
@@ -22,7 +21,7 @@ public class TransactionHistoryGUI extends JFrame {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					TransactionHistoryGUI frame = new TransactionHistoryGUI();
+					BalanceGUI frame = new BalanceGUI();
 					frame.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
@@ -34,27 +33,27 @@ public class TransactionHistoryGUI extends JFrame {
 	/**
 	 * Create the frame.
 	 */
-	public TransactionHistoryGUI() {
-		setResizable(false);
+	public BalanceGUI() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 496, 358);
+		setBounds(100, 100, 199, 152);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		
-		JTextArea txtrTextGoesHere = new JTextArea();
-		txtrTextGoesHere.setEditable(false);
-		txtrTextGoesHere.setBounds(90, 91, 323, 228);
-		contentPane.add(txtrTextGoesHere);
+		JLabel lblBalance = new JLabel("Balance");
+		lblBalance.setFont(new Font("Tahoma", Font.BOLD, 14));
+		lblBalance.setBounds(60, 11, 182, 23);
+		contentPane.add(lblBalance);
 		
-		JLabel lblTransactionHistory = new JLabel("Transaction History");
-		lblTransactionHistory.setFont(new Font("Tahoma", Font.BOLD, 14));
-		lblTransactionHistory.setBounds(176, 56, 184, 24);
-		contentPane.add(lblTransactionHistory);
+		textField = new JTextField();
+		textField.setColumns(10);
+		textField.setBounds(50, 45, 86, 20);
+		contentPane.add(textField);
 		
 		JButton button = new JButton("Back");
-		button.setBounds(10, 11, 68, 23);
+		button.setBounds(50, 80, 76, 23);
 		contentPane.add(button);
 	}
+
 }

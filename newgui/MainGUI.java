@@ -41,32 +41,28 @@ public class MainGUI extends JFrame {
 		contentPane.setLayout(null);
 		
 		JButton btnWithdraw = new JButton("Withdraw & Deposit");
-		btnWithdraw.setBounds(188, 111, 169, 23);
+		btnWithdraw.setBounds(188, 111, 218, 23);
 		contentPane.add(btnWithdraw);
 		
 		JButton btnTransactionHistory = new JButton("Transaction History");
-		btnTransactionHistory.setBounds(188, 146, 169, 23);
+		btnTransactionHistory.setBounds(188, 146, 218, 23);
 		contentPane.add(btnTransactionHistory);
 		
 		JButton btnPasswordReset = new JButton("Password Reset");
-		btnPasswordReset.setBounds(188, 214, 169, 23);
+		btnPasswordReset.setBounds(188, 214, 218, 23);
 		contentPane.add(btnPasswordReset);
 		
-		JButton btnDebitCardPin = new JButton("Debit Card Pin Reset");
-		btnDebitCardPin.setBounds(188, 250, 169, 23);
+		JButton btnDebitCardPin = new JButton("Debit Card Management");
+		btnDebitCardPin.setBounds(188, 250, 218, 23);
 		contentPane.add(btnDebitCardPin);
 		
-		JButton btnDebitCardCancellation = new JButton("Debit Card Cancellation");
-		btnDebitCardCancellation.setBounds(188, 284, 169, 23);
-		contentPane.add(btnDebitCardCancellation);
-		
 		JButton btnChangeContactInformation = new JButton("Change Contact Information");
-		btnChangeContactInformation.setBounds(188, 180, 169, 23);
+		btnChangeContactInformation.setBounds(188, 180, 218, 23);
 		contentPane.add(btnChangeContactInformation);
 		
 		JLabel lblFunctions = new JLabel("Options");
 		lblFunctions.setFont(new Font("Tahoma", Font.BOLD, 18));
-		lblFunctions.setBounds(235, 69, 155, 29);
+		lblFunctions.setBounds(260, 71, 155, 29);
 		contentPane.add(lblFunctions);
 		
 		JButton btnBack = new JButton("Back");

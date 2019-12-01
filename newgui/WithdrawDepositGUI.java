@@ -45,15 +45,15 @@ public class WithdrawDepositGUI extends JFrame {
 		contentPane.setLayout(null);
 		
 		JButton btnNewButton = new JButton("Withdraw");
-		btnNewButton.setBounds(124, 153, 89, 23);
+		btnNewButton.setBounds(124, 139, 89, 23);
 		contentPane.add(btnNewButton);
 		
 		JButton btnDeposit = new JButton("Deposit");
-		btnDeposit.setBounds(124, 187, 89, 23);
+		btnDeposit.setBounds(124, 173, 89, 23);
 		contentPane.add(btnDeposit);
 		
 		JLabel lblAmount = new JLabel("Amount");
-		lblAmount.setBounds(68, 114, 89, 14);
+		lblAmount.setBounds(58, 114, 89, 14);
 		contentPane.add(lblAmount);
 		
 		JLabel lblWithdrawDepsoit = new JLabel("Withdraw & Deposit");
@@ -62,7 +62,7 @@ public class WithdrawDepositGUI extends JFrame {
 		contentPane.add(lblWithdrawDepsoit);
 		
 		JLabel lblAccount = new JLabel("Account #");
-		lblAccount.setBounds(68, 77, 89, 14);
+		lblAccount.setBounds(58, 77, 89, 14);
 		contentPane.add(lblAccount);
 		
 		textField = new JTextField();
@@ -74,5 +74,9 @@ public class WithdrawDepositGUI extends JFrame {
 		textField_1.setColumns(10);
 		textField_1.setBounds(127, 111, 86, 20);
 		contentPane.add(textField_1);
+		
+		JButton button = new JButton("Back");
+		button.setBounds(250, 208, 72, 23);
+		contentPane.add(button);
 	}
 }

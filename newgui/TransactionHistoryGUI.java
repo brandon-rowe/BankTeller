@@ -45,6 +45,7 @@ public class TransactionHistoryGUI extends JFrame {
 		contentPane.setLayout(null);
 		
 		JTextArea txtrTextGoesHere = new JTextArea();
+		txtrTextGoesHere.setEditable(false);
 		txtrTextGoesHere.setBounds(90, 91, 323, 228);
 		contentPane.add(txtrTextGoesHere);
 		
@@ -65,5 +66,9 @@ public class TransactionHistoryGUI extends JFrame {
 		JLabel lblAcc = new JLabel("Account #");
 		lblAcc.setBounds(129, 66, 68, 14);
 		contentPane.add(lblAcc);
+		
+		JButton button = new JButton("Back");
+		button.setBounds(10, 11, 68, 23);
+		contentPane.add(button);
 	}
 }

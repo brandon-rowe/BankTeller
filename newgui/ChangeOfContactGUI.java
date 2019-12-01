@@ -8,6 +8,10 @@ import javax.swing.JLabel;
 import java.awt.Font;
 import javax.swing.JTextField;
 import javax.swing.JButton;
+import java.awt.event.ActionListener;
+import java.io.FileReader;
+import java.io.IOException;
+import java.awt.event.ActionEvent;
 
 public class ChangeOfContactGUI extends JFrame {
 
@@ -15,26 +19,11 @@ public class ChangeOfContactGUI extends JFrame {
 	private JTextField txtFieldAddress;
 	private JTextField txtFieldPhoneNumber;
 
-	/**
-	 * Launch the application.
-	 */
-	public static void main(String[] args) {
-		EventQueue.invokeLater(new Runnable() {
-			public void run() {
-				try {
-					ChangeOfContactGUI frame = new ChangeOfContactGUI();
-					frame.setVisible(true);
-				} catch (Exception e) {
-					e.printStackTrace();
-				}
-			}
-		});
-	}
 
 	/**
 	 * Create the frame.
 	 */
-	public ChangeOfContactGUI() {
+	public ChangeOfContactGUI(driver driver) {
 		setResizable(false);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 448, 212);
@@ -67,10 +56,38 @@ public class ChangeOfContactGUI extends JFrame {
 		contentPane.add(txtFieldPhoneNumber);
 		
 		JButton btnUpdate = new JButton("Update");
+		btnUpdate.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				try {
+					
+					if (driver.type.equals("employee")) {
+						driver.employee.customer.changeContact(txtFieldAddress.getText(), txtFieldPhoneNumber.getText());
+						driver.employee.customer.writeCustomer();
+					}
+					else {
+						driver.changeContact(driver.usern, txtFieldAddress.getText(), txtFieldPhoneNumber.getText());
+					}
+
+					txtFieldAddress.setText("");
+					txtFieldPhoneNumber.setText("");
+				} catch (IOException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+			}
+		});
 		btnUpdate.setBounds(236, 150, 89, 23);
 		contentPane.add(btnUpdate);
 		
 		JButton btnBack = new JButton("Back");
+		btnBack.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				
+				MainGUI mainGUI = new MainGUI(driver);
+				mainGUI.setVisible(true);
+				dispose();
+			}
+		});
 		btnBack.setBounds(10, 11, 76, 23);
 		contentPane.add(btnBack);
 	}

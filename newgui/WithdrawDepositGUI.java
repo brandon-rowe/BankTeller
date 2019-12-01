@@ -7,34 +7,23 @@ import javax.swing.border.EmptyBorder;
 import javax.swing.JButton;
 import javax.swing.JTextArea;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
+
 import java.awt.Font;
 import javax.swing.JTextField;
+import java.awt.event.ActionListener;
+import java.io.IOException;
+import java.awt.event.ActionEvent;
 
 public class WithdrawDepositGUI extends JFrame {
 
 	private JPanel contentPane;
-	private JTextField btnAmount;
-
-	/**
-	 * Launch the application.
-	 */
-	public static void main(String[] args) {
-		EventQueue.invokeLater(new Runnable() {
-			public void run() {
-				try {
-					WithdrawDepositGUI frame = new WithdrawDepositGUI();
-					frame.setVisible(true);
-				} catch (Exception e) {
-					e.printStackTrace();
-				}
-			}
-		});
-	}
+	private JTextField txtFieldAmount;
 
 	/**
 	 * Create the frame.
 	 */
-	public WithdrawDepositGUI() {
+	public WithdrawDepositGUI(driver driver) {
 		setResizable(false);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 338, 270);
@@ -44,10 +33,38 @@ public class WithdrawDepositGUI extends JFrame {
 		contentPane.setLayout(null);
 		
 		JButton btnWithdraw = new JButton("Withdraw");
+		btnWithdraw.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+					try {
+						if (driver.type.equals("employee")) {
+							driver.employee.customer.withdraw(txtFieldAmount.getText());
+						}
+						else {
+							driver.withdraw(driver.usern, txtFieldAmount.getText());	
+						}
+						txtFieldAmount.setText("");
+						//driver.employee.customer.writeCustomer();
+					} catch (IOException e) {
+						// TODO Auto-generated catch block
+						e.printStackTrace();
+					}
+			}
+		});
 		btnWithdraw.setBounds(124, 112, 89, 23);
 		contentPane.add(btnWithdraw);
 		
 		JButton btnDeposit = new JButton("Deposit");
+		btnDeposit.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				try {
+					driver.deposit(driver.usern, txtFieldAmount.getText());
+				} catch (IOException e1) {
+					// TODO Auto-generated catch block
+					e1.printStackTrace();
+				}
+			
+			}
+		});
 		btnDeposit.setBounds(124, 149, 89, 23);
 		contentPane.add(btnDeposit);
 		
@@ -60,13 +77,29 @@ public class WithdrawDepositGUI extends JFrame {
 		lblWithdrawDeposit.setBounds(98, 26, 182, 23);
 		contentPane.add(lblWithdrawDeposit);
 		
-		btnAmount = new JTextField();
-		btnAmount.setColumns(10);
-		btnAmount.setBounds(124, 70, 86, 20);
-		contentPane.add(btnAmount);
+		txtFieldAmount = new JTextField();
+		txtFieldAmount.setColumns(10);
+		txtFieldAmount.setBounds(124, 70, 86, 20);
+		contentPane.add(txtFieldAmount);
 		
 		JButton btnBack = new JButton("Back");
+		btnBack.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				
+				MainGUI mainGUI = new MainGUI(driver);
+				mainGUI.setVisible(true);
+				dispose();
+			}
+		});
 		btnBack.setBounds(250, 208, 72, 23);
 		contentPane.add(btnBack);
 	}
+	
+	//source: https://stackoverflow.com/questions/7080205/popup-message-boxes
+	
+    public static void errorBox(String infoMessage, String titleBar)
+{
+        JOptionPane.showMessageDialog(null, infoMessage, "InfoBox: " + titleBar, JOptionPane.INFORMATION_MESSAGE);
+}
+    
 }

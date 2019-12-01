@@ -8,33 +8,23 @@ import javax.swing.JTextArea;
 import javax.swing.JLabel;
 import javax.swing.JButton;
 import javax.swing.JTextField;
+import javax.swing.ScrollPaneConstants;
 import javax.swing.JScrollPane;
 import java.awt.Font;
+import java.awt.event.ActionListener;
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.IOException;
+import java.awt.event.ActionEvent;
 
 public class TransactionHistoryGUI extends JFrame {
 
 	private JPanel contentPane;
 
 	/**
-	 * Launch the application.
-	 */
-	public static void main(String[] args) {
-		EventQueue.invokeLater(new Runnable() {
-			public void run() {
-				try {
-					TransactionHistoryGUI frame = new TransactionHistoryGUI();
-					frame.setVisible(true);
-				} catch (Exception e) {
-					e.printStackTrace();
-				}
-			}
-		});
-	}
-
-	/**
 	 * Create the frame.
 	 */
-	public TransactionHistoryGUI() {
+	public TransactionHistoryGUI(driver driver) {
 		setResizable(false);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 496, 358);
@@ -44,9 +34,13 @@ public class TransactionHistoryGUI extends JFrame {
 		contentPane.setLayout(null);
 		
 		JTextArea txtAreaTransactionHistory = new JTextArea();
+		txtAreaTransactionHistory.setColumns(1);
+		txtAreaTransactionHistory.setRows(50);
+		txtAreaTransactionHistory.setLineWrap(true);
 		txtAreaTransactionHistory.setEditable(false);
 		txtAreaTransactionHistory.setBounds(90, 91, 323, 228);
 		contentPane.add(txtAreaTransactionHistory);
+		
 		
 		JLabel lblTransactionHistory = new JLabel("Transaction History");
 		lblTransactionHistory.setFont(new Font("Tahoma", Font.BOLD, 14));
@@ -54,7 +48,40 @@ public class TransactionHistoryGUI extends JFrame {
 		contentPane.add(lblTransactionHistory);
 		
 		JButton btnBack = new JButton("Back");
+		btnBack.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				
+				MainGUI mainGUI = new MainGUI(driver);
+				mainGUI.setVisible(true);
+				dispose();
+			}
+		});
 		btnBack.setBounds(10, 11, 68, 23);
 		contentPane.add(btnBack);
-	}
+		
+		
+		JScrollPane scrollPane = new JScrollPane(txtAreaTransactionHistory);
+		scrollPane.setBounds(90, 91, 323, 228);
+		contentPane.add(scrollPane);
+
+		
+	    try
+        {
+	    	FileReader reader;
+			if (driver.type.equals("employee")) {
+	            reader = new FileReader(driver.directory + "/Database/customer/" + driver.employee.customer.userID + ".txt");
+			}
+			else {
+	            reader = new FileReader(driver.directory + "/Database/customer/" + driver.usern + ".txt");
+			}
+
+            BufferedReader br = new BufferedReader(reader);
+            txtAreaTransactionHistory.read( br, null );
+            br.close();
+            txtAreaTransactionHistory.requestFocus();
+        }
+        catch(Exception e2) { System.out.println(e2); }
+
+	}	
 }
+

@@ -9,6 +9,7 @@ import javax.swing.JTextField;
 import javax.swing.JLabel;
 import java.awt.Font;
 import java.awt.event.ActionListener;
+import java.io.IOException;
 import java.awt.event.ActionEvent;
 import javax.swing.JPasswordField;
 
@@ -48,7 +49,46 @@ public class LoginGUI extends JFrame {
 		
 		JButton btnLogin = new JButton("Login");
 		btnLogin.addActionListener(new ActionListener() {
+			@SuppressWarnings("deprecation")
 			public void actionPerformed(ActionEvent e) {
+				driver driver;
+				
+				if (txtFieldUsername.getText().startsWith("E")) {
+					driver = new driver(txtFieldUsername.getText(), txtFieldPassword.getText(), "employee");
+				}
+				else
+				{
+					driver = new driver(txtFieldUsername.getText(), txtFieldPassword.getText(), "customer");
+				}
+
+				try {
+					dispose();
+					driver.main(null);
+					if (txtFieldUsername.getText().startsWith("E"))
+					{
+						CustomerSelectorGUI customerSelectorGUI = new CustomerSelectorGUI(driver);
+						customerSelectorGUI.setVisible(true);
+					}
+					else
+					{
+						MainGUI mainGUI = new MainGUI(driver);
+						mainGUI.setVisible(true);
+					}
+				} catch (IOException e1) {
+					// TODO Auto-generated catch block
+					e1.printStackTrace();
+				}
+				
+
+
+				//try {
+					//System.out.println(txtFieldPassword.getText());
+					//driver.login(txtFieldUsername.getText(), txtFieldPassword.getText());
+					//driver.login("C1000", "password");
+				//} catch (IOException e1) {
+					// TODO Auto-generated catch block
+				//	e1.printStackTrace();
+				//}
 			}
 		});
 		btnLogin.setBounds(115, 188, 138, 23);

@@ -61,7 +61,7 @@ public class driver
 		{
 			try
 			{
-				scanner = new Scanner(new File(directory + user + ".txt"));
+				scanner = new Scanner(new File(user + ".txt"));
 
 				if (scanner.nextLine().equals(Integer.toString(password)))
 				{
@@ -84,7 +84,7 @@ public class driver
 		{
 			try
 			{
-				scanner = new Scanner(new File(directory + user + ".txt"));
+				scanner = new Scanner(new File(user + ".txt"));
 
 				if (scanner.nextLine().equals(Integer.toString(password)))
 				{
@@ -130,7 +130,7 @@ public class driver
 		customer = new customer(scanner.nextLine(), scanner.nextLine(), scanner.nextLine(), scanner.nextLine(),
 					scanner.nextLine(), Double.valueOf(scanner.nextLine()), user, directory, true);
 			
-		customer = null;
+		//customer = null;
 	}
 
 	static void withdraw(String user, String amount) throws IOException
@@ -143,7 +143,7 @@ public class driver
 			customer.writeCustomer();
 			amount = "";
 			
-		customer = null;
+		//customer = null;
 	}
 	
 	static void deposit(String user, String amount) throws IOException
@@ -156,7 +156,7 @@ public class driver
 			customer.writeCustomer();
 			amount = "";
 			
-		customer = null;
+		//customer = null;
 	}
 	
 	static void resetPassword(String user, String pass) throws IOException
@@ -168,7 +168,7 @@ public class driver
 			customer.resetPassword(pass);
 			customer.writeCustomer();
 			
-		customer = null;
+		//customer = null;
 	}
 	
 	

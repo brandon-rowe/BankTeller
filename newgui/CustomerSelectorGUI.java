@@ -26,6 +26,8 @@ public class CustomerSelectorGUI extends JFrame {
 	 * Create the frame.
 	 */
 	public CustomerSelectorGUI(driver driver) {
+   
+		setResizable(true);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 350, 300);
 		contentPane = new JPanel();

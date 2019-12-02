@@ -5,6 +5,8 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
+
 import java.awt.Font;
 import javax.swing.JTextField;
 import javax.swing.JButton;
@@ -52,6 +54,7 @@ public class PasswordResetGUI extends JFrame {
 								driver.resetPassword(driver.usern, pwdFieldPass.getText());
 								pwdFieldPass.setText("");
 								pwdFieldVerifyPass.setText("");
+								errorBox("Password has been reset sucessfully.", "Password reset succesful");
 							}
 
 						}
@@ -89,4 +92,9 @@ public class PasswordResetGUI extends JFrame {
 		pwdFieldVerifyPass.setBounds(163, 104, 89, 20);
 		contentPane.add(pwdFieldVerifyPass);
 	}
+	
+    public static void errorBox(String infoMessage, String titleBar)
+    {
+        JOptionPane.showMessageDialog(null, infoMessage, "InfoBox: " + titleBar, JOptionPane.INFORMATION_MESSAGE);
+    }
 }

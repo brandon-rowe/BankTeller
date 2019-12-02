@@ -109,4 +109,5 @@ public class LoginGUI extends JFrame {
 		txtFieldPassword.setBounds(146, 148, 86, 20);
 		contentPane.add(txtFieldPassword);
 	}
+	
 }

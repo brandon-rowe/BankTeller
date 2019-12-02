@@ -112,8 +112,9 @@ public class employee
 		try
 		{
 			scanner = new Scanner(new File(directory + "/Database/customer/" + userID + ".txt"));
-			customer = new customer(scanner.nextLine(), scanner.nextLine(), scanner.nextLine(), scanner.nextLine(),
-					scanner.nextLine(), Double.valueOf(scanner.nextLine()), userID, directory, false);
+			customer customer = new customer(scanner.nextLine(), scanner.nextLine(), scanner.nextLine(), scanner.nextLine(),
+					scanner.nextLine(), Double.valueOf(scanner.nextLine()), scanner.nextLine(), scanner.nextLine(), userID, directory, true);
+			customer = null;
 
 		}
 		catch (FileNotFoundException e)

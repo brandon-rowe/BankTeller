@@ -5,6 +5,8 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
+
 import java.awt.Font;
 import javax.swing.JTextField;
 import javax.swing.JButton;
@@ -59,11 +61,11 @@ public class ChangeOfContactGUI extends JFrame {
 		btnUpdate.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				try {
-					
 						driver.changeContact(driver.usern, txtFieldAddress.getText(), txtFieldPhoneNumber.getText());
 
 					txtFieldAddress.setText("");
 					txtFieldPhoneNumber.setText("");
+					errorBox("Contact information updated successfully.", "Update successful");
 				} catch (IOException e) {
 					// TODO Auto-generated catch block
 					e.printStackTrace();
@@ -85,4 +87,10 @@ public class ChangeOfContactGUI extends JFrame {
 		btnBack.setBounds(10, 11, 76, 23);
 		contentPane.add(btnBack);
 	}
+	
+    public static void errorBox(String infoMessage, String titleBar)
+    {
+        JOptionPane.showMessageDialog(null, infoMessage, "InfoBox: " + titleBar, JOptionPane.INFORMATION_MESSAGE);
+    }
+    
 }

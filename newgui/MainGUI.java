@@ -22,7 +22,7 @@ public class MainGUI extends JFrame {
 	public MainGUI(driver driver) {
 		setResizable(false);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 350, 300);
+		setBounds(100, 100, 356, 350);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
@@ -109,10 +109,20 @@ public class MainGUI extends JFrame {
 				dispose();
 			}
 		});
-		btnBack.setBounds(140, 250, 94, 23);
+		btnBack.setBounds(137, 288, 94, 23);
 		contentPane.add(btnBack);
+		
+		JButton btnDebitCardManagement = new JButton("Debit Card Management");
+		btnDebitCardManagement.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				DebitCardChangeCancelGUI debitCardChangeCancelGUI = new DebitCardChangeCancelGUI(driver);
+				debitCardChangeCancelGUI.setVisible(true);
+				dispose();
+			}
+		});
+		btnDebitCardManagement.setBounds(75, 249, 218, 23);
+		contentPane.add(btnDebitCardManagement);
 		
 		
 	}
-
 }

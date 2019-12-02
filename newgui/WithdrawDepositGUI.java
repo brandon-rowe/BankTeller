@@ -36,7 +36,8 @@ public class WithdrawDepositGUI extends JFrame {
 		btnWithdraw.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 					try {
-							driver.withdraw(driver.usern, txtFieldAmount.getText());	
+							driver.withdraw(driver.usern, txtFieldAmount.getText());
+							errorBox("You have withdrawn $" + txtFieldAmount.getText() + " successfully.", "Withdraw successful");
 							txtFieldAmount.setText("");
 						}
 					  catch (IOException e) {
@@ -54,6 +55,8 @@ public class WithdrawDepositGUI extends JFrame {
 			public void actionPerformed(ActionEvent e) {
 				try {
 					driver.deposit(driver.usern, txtFieldAmount.getText());
+					errorBox("You have deposited $" + txtFieldAmount.getText() + " successfully.", "Deposit successful");
+					txtFieldAmount.setText("");
 				} catch (IOException e1) {
 					// TODO Auto-generated catch block
 					e1.printStackTrace();

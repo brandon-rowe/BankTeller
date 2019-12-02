@@ -10,9 +10,10 @@ public class customer
 	String password, fname, lname, address, phoneNumber, userID;
 	static String directory;
 	static Scanner scanner;
+	static String debitCard, pin;
 	double balance;
 
-	public customer(String password, String fname, String lname, String address, String phoneNumber, double balance,
+	public customer(String password, String fname, String lname, String address, String phoneNumber, double balance, String debitCard, String debitPin,
 			String userID, String directory, boolean menu) throws IOException
 	{
 		this.password = password;
@@ -22,6 +23,8 @@ public class customer
 		this.phoneNumber = phoneNumber;
 		this.balance = balance;
 		this.userID = userID;
+		this.debitCard = debitCard;
+		this.pin = debitPin;
 		customer.directory = directory;
 
 		/////// Testing, needed for quickLoad
@@ -119,6 +122,14 @@ public class customer
 		phoneNumber = p;
 	}
 
+	void debitCardPinChange(String p) {
+		pin = String.valueOf(p.hashCode());
+	}
+	
+	void debitCardCancel() {
+		debitCard = "";
+		pin = "";
+	}
 	
 	void resetPassword(String pass)
 	{
@@ -134,6 +145,7 @@ public class customer
 		//	System.out.println("Incorrect Password");
 		password = String.valueOf(pass.hashCode());
 	}
+
 
 	private void writeHistory(String type, String amount) throws IOException
 	{
@@ -192,6 +204,8 @@ public class customer
 		printwriter.println(address);
 		printwriter.println(phoneNumber);
 		printwriter.println(balance);
+		printwriter.println(debitCard);
+		printwriter.println(pin);
 		printwriter.println();
 		
 		while (scanner.hasNextLine())

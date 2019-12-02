@@ -10,7 +10,7 @@ import java.io.*;
 public class driver
 {
 	static Scanner scanner;
-	static String directory = "";
+	static String directory = "C:/Users/Risen/Documents/511GroupProject2/BankTeller/newgui/";
 	static String usern;
 	static String pass;
 	static employee employee;
@@ -128,7 +128,7 @@ public class driver
 		scanner = new Scanner(new File(directory + user + ".txt"));
 		customer customer;
 		customer = new customer(scanner.nextLine(), scanner.nextLine(), scanner.nextLine(), scanner.nextLine(),
-					scanner.nextLine(), Double.valueOf(scanner.nextLine()), user, directory, true);
+					scanner.nextLine(), Double.valueOf(scanner.nextLine()), scanner.nextLine(), scanner.nextLine(), user, directory, true);
 			
 		//customer = null;
 	}
@@ -137,8 +137,8 @@ public class driver
 	{
 		scanner = new Scanner(new File(directory +  user + ".txt"));
 		customer customer;
-			customer = new customer(scanner.nextLine(), scanner.nextLine(), scanner.nextLine(), scanner.nextLine(),
-					scanner.nextLine(), Double.valueOf(scanner.nextLine()), user, directory, true);
+		customer = new customer(scanner.nextLine(), scanner.nextLine(), scanner.nextLine(), scanner.nextLine(),
+				scanner.nextLine(), Double.valueOf(scanner.nextLine()), scanner.nextLine(), scanner.nextLine(), user, directory, true);
 			customer.withdraw(amount);
 			customer.writeCustomer();
 			amount = "";
@@ -150,8 +150,8 @@ public class driver
 	{
 		scanner = new Scanner(new File(directory + user + ".txt"));
 		customer customer;
-			customer = new customer(scanner.nextLine(), scanner.nextLine(), scanner.nextLine(), scanner.nextLine(),
-					scanner.nextLine(), Double.valueOf(scanner.nextLine()), user, directory, true);
+		customer = new customer(scanner.nextLine(), scanner.nextLine(), scanner.nextLine(), scanner.nextLine(),
+				scanner.nextLine(), Double.valueOf(scanner.nextLine()), scanner.nextLine(), scanner.nextLine(), user, directory, true);
 			customer.deposit(amount);
 			customer.writeCustomer();
 			amount = "";
@@ -163,8 +163,8 @@ public class driver
 	{
 		scanner = new Scanner(new File(directory + user + ".txt"));
 		customer customer;
-			customer = new customer(scanner.nextLine(), scanner.nextLine(), scanner.nextLine(), scanner.nextLine(),
-					scanner.nextLine(), Double.valueOf(scanner.nextLine()), user, directory, true);
+		customer = new customer(scanner.nextLine(), scanner.nextLine(), scanner.nextLine(), scanner.nextLine(),
+				scanner.nextLine(), Double.valueOf(scanner.nextLine()), scanner.nextLine(), scanner.nextLine(), user, directory, true);
 			customer.resetPassword(pass);
 			customer.writeCustomer();
 			
@@ -177,8 +177,8 @@ public class driver
 	{
 		scanner = new Scanner(new File(directory + user + ".txt"));
 		customer customer;
-			customer = new customer(scanner.nextLine(), scanner.nextLine(), scanner.nextLine(), scanner.nextLine(),
-					scanner.nextLine(), Double.valueOf(scanner.nextLine()), user, directory, true);
+		customer = new customer(scanner.nextLine(), scanner.nextLine(), scanner.nextLine(), scanner.nextLine(),
+				scanner.nextLine(), Double.valueOf(scanner.nextLine()), scanner.nextLine(), scanner.nextLine(), user, directory, true);
 			return customer.balance();
 			
 	}
@@ -187,9 +187,33 @@ public class driver
 	{
 		scanner = new Scanner(new File(directory + user + ".txt"));
 		customer customer;
-			customer = new customer(scanner.nextLine(), scanner.nextLine(), scanner.nextLine(), scanner.nextLine(),
-					scanner.nextLine(), Double.valueOf(scanner.nextLine()), user, directory, true);
+		customer = new customer(scanner.nextLine(), scanner.nextLine(), scanner.nextLine(), scanner.nextLine(),
+				scanner.nextLine(), Double.valueOf(scanner.nextLine()), scanner.nextLine(), scanner.nextLine(), user, directory, true);
 			customer.changeContact(address, phoneNumber);
+			customer.writeCustomer();
+			customer = null;
+			
+	}
+	
+	static void debitCardPinChange(String user, String newPin) throws IOException
+	{
+		scanner = new Scanner(new File(directory + user + ".txt"));
+		customer customer;
+		customer = new customer(scanner.nextLine(), scanner.nextLine(), scanner.nextLine(), scanner.nextLine(),
+				scanner.nextLine(), Double.valueOf(scanner.nextLine()), scanner.nextLine(), scanner.nextLine(), user, directory, true);
+			customer.debitCardPinChange(newPin);
+			customer.writeCustomer();
+			customer = null;
+			
+	}
+	
+	static void debitCardCancellation(String user) throws IOException
+	{
+		scanner = new Scanner(new File(directory + user + ".txt"));
+		customer customer;
+		customer = new customer(scanner.nextLine(), scanner.nextLine(), scanner.nextLine(), scanner.nextLine(),
+				scanner.nextLine(), Double.valueOf(scanner.nextLine()), scanner.nextLine(), scanner.nextLine(), user, directory, true);
+			customer.debitCardCancel();
 			customer.writeCustomer();
 			customer = null;
 			
@@ -199,8 +223,8 @@ public class driver
 	{
 		scanner = new Scanner(new File(directory + user + ".txt"));
 		customer customer;
-			customer = new customer(scanner.nextLine(), scanner.nextLine(), scanner.nextLine(), scanner.nextLine(),
-					scanner.nextLine(), Double.valueOf(scanner.nextLine()), user, directory, true);
+		customer = new customer(scanner.nextLine(), scanner.nextLine(), scanner.nextLine(), scanner.nextLine(),
+				scanner.nextLine(), Double.valueOf(scanner.nextLine()), scanner.nextLine(), scanner.nextLine(), user, directory, true);
 			return customer.history();
 			
 	}
@@ -251,7 +275,7 @@ public class driver
 	{
 		scanner = new Scanner(new File("E:/Users/Tater/Documents/Git/BankTeller/src/Database/customer/" + user + ".txt"));
 		customer customer = new customer(scanner.nextLine(), scanner.nextLine(), scanner.nextLine(), scanner.nextLine(),
-				scanner.nextLine(), Double.valueOf(scanner.nextLine()), user, directory, true);
+				scanner.nextLine(), Double.valueOf(scanner.nextLine()), scanner.nextLine(), scanner.nextLine(), user, directory, true);
 		customer = null;
 	}
 }

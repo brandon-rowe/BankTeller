@@ -5,39 +5,27 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
+
 import java.awt.Font;
 import javax.swing.JTextField;
 import javax.swing.JButton;
+import java.awt.event.ActionListener;
+import java.io.IOException;
+import java.awt.event.ActionEvent;
 
 public class DebitCardChangeCancelGUI extends JFrame {
 
 	private JPanel contentPane;
-	private JTextField textField;
-	private JTextField textField_1;
-
-	/**
-	 * Launch the application.
-	 */
-	public static void main(String[] args) {
-		EventQueue.invokeLater(new Runnable() {
-			public void run() {
-				try {
-					DebitCardChangeCancelGUI frame = new DebitCardChangeCancelGUI();
-					frame.setVisible(true);
-				} catch (Exception e) {
-					e.printStackTrace();
-				}
-			}
-		});
-	}
+	private JTextField txtFieldNewPin;
 
 	/**
 	 * Create the frame.
 	 */
-	public DebitCardChangeCancelGUI() {
+	public DebitCardChangeCancelGUI(driver driver) {
 		setResizable(false);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 350, 300);
+		setBounds(100, 100, 348, 215);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
@@ -48,39 +36,73 @@ public class DebitCardChangeCancelGUI extends JFrame {
 		lblDebitCardPin.setBounds(110, 31, 237, 24);
 		contentPane.add(lblDebitCardPin);
 		
-		JLabel label = new JLabel("Account #");
-		label.setBounds(95, 82, 68, 14);
-		contentPane.add(label);
-		
-		textField = new JTextField();
-		textField.setColumns(10);
-		textField.setBounds(185, 78, 86, 20);
-		contentPane.add(textField);
-		
 		JLabel lblNewPin = new JLabel("New Pin #");
-		lblNewPin.setBounds(95, 112, 148, 14);
+		lblNewPin.setBounds(85, 82, 148, 14);
 		contentPane.add(lblNewPin);
 		
-		textField_1 = new JTextField();
-		textField_1.setColumns(10);
-		textField_1.setBounds(185, 109, 86, 20);
-		contentPane.add(textField_1);
+		txtFieldNewPin = new JTextField();
+		txtFieldNewPin.setColumns(10);
+		txtFieldNewPin.setBounds(166, 79, 86, 20);
+		contentPane.add(txtFieldNewPin);
 		
       
       JButton btnResetPin = new JButton("Reset Pin");
-		btnResetPin.setBounds(85, 165, 187, 23);
+      btnResetPin.addActionListener(new ActionListener() {
+      	public void actionPerformed(ActionEvent e) {
+			try {
+				if (!txtFieldNewPin.getText().equals(""))
+				{
+					driver.debitCardPinChange(driver.usern, txtFieldNewPin.getText());	
+					errorBox("Debit card pin has been changed.", "Debit card pin changed");
+					txtFieldNewPin.setText("");
+				}
+			}
+		  catch (IOException e1) {
+			// TODO Auto-generated catch block
+			e1.printStackTrace(); 
+		  }
+      	}
+      });
+		btnResetPin.setBounds(85, 113, 187, 23);
 		contentPane.add(btnResetPin);
       
       
 		JButton btnCancelDebitCard = new JButton("Cancel Debit Card");
-		btnCancelDebitCard.setBounds(85, 199, 187, 23);
+		btnCancelDebitCard.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				try {
+						driver.debitCardCancellation(driver.usern);
+						errorBox("Debit card has been cancelled.", "Debit card cancelled");
+				}
+			  catch (IOException e1) {
+				// TODO Auto-generated catch block
+				e1.printStackTrace(); 
+			  }
+			}
+		});
+		btnCancelDebitCard.setBounds(85, 147, 187, 23);
 		contentPane.add(btnCancelDebitCard);
 		
 		
 		
-		JButton button = new JButton("Back");
-		button.setBounds(85, 233, 187, 23);
-		contentPane.add(button);
+		JButton btnBack = new JButton("Back");
+		btnBack.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				MainGUI mainGUI = new MainGUI(driver);
+				mainGUI.setVisible(true);
+				dispose();
+			}
+		});
+		btnBack.setBounds(10, 11, 65, 23);
+		contentPane.add(btnBack);
+		
+		//source: https://stackoverflow.com/questions/7080205/popup-message-boxes
+		
 	}
+	
+    public static void errorBox(String infoMessage, String titleBar)
+    {
+        JOptionPane.showMessageDialog(null, infoMessage, "InfoBox: " + titleBar, JOptionPane.INFORMATION_MESSAGE);
+    }
 
 }

@@ -37,7 +37,7 @@ public class DebitCardChangeCancelGUI extends JFrame {
 	public DebitCardChangeCancelGUI() {
 		setResizable(false);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 423, 295);
+		setBounds(100, 100, 350, 300);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
@@ -45,37 +45,41 @@ public class DebitCardChangeCancelGUI extends JFrame {
 		
 		JLabel lblDebitCardPin = new JLabel("Debit Card Options");
 		lblDebitCardPin.setFont(new Font("Tahoma", Font.BOLD, 14));
-		lblDebitCardPin.setBounds(155, 31, 237, 24);
+		lblDebitCardPin.setBounds(110, 31, 237, 24);
 		contentPane.add(lblDebitCardPin);
 		
 		JLabel label = new JLabel("Account #");
-		label.setBounds(94, 82, 68, 14);
+		label.setBounds(95, 82, 68, 14);
 		contentPane.add(label);
 		
 		textField = new JTextField();
 		textField.setColumns(10);
-		textField.setBounds(187, 78, 86, 20);
+		textField.setBounds(185, 78, 86, 20);
 		contentPane.add(textField);
 		
 		JLabel lblNewPin = new JLabel("New Pin #");
-		lblNewPin.setBounds(94, 112, 148, 14);
+		lblNewPin.setBounds(95, 112, 148, 14);
 		contentPane.add(lblNewPin);
 		
 		textField_1 = new JTextField();
 		textField_1.setColumns(10);
-		textField_1.setBounds(187, 109, 86, 20);
+		textField_1.setBounds(185, 109, 86, 20);
 		contentPane.add(textField_1);
 		
+      
+      JButton btnResetPin = new JButton("Reset Pin");
+		btnResetPin.setBounds(85, 165, 187, 23);
+		contentPane.add(btnResetPin);
+      
+      
 		JButton btnCancelDebitCard = new JButton("Cancel Debit Card");
-		btnCancelDebitCard.setBounds(129, 199, 187, 23);
+		btnCancelDebitCard.setBounds(85, 199, 187, 23);
 		contentPane.add(btnCancelDebitCard);
 		
-		JButton btnResetPin = new JButton("Reset Pin");
-		btnResetPin.setBounds(129, 165, 187, 23);
-		contentPane.add(btnResetPin);
+		
 		
 		JButton button = new JButton("Back");
-		button.setBounds(129, 233, 187, 23);
+		button.setBounds(85, 233, 187, 23);
 		contentPane.add(button);
 	}
 

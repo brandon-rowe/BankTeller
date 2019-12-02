@@ -61,7 +61,7 @@ public class driver
 		{
 			try
 			{
-				scanner = new Scanner(new File(user + ".txt"));
+				scanner = new Scanner(new File(directory + user + ".txt"));
 
 				if (scanner.nextLine().equals(Integer.toString(password)))
 				{
@@ -84,7 +84,7 @@ public class driver
 		{
 			try
 			{
-				scanner = new Scanner(new File(user + ".txt"));
+				scanner = new Scanner(new File(directory + user + ".txt"));
 
 				if (scanner.nextLine().equals(Integer.toString(password)))
 				{

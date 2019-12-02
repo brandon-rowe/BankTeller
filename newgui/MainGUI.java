@@ -56,7 +56,7 @@ public class MainGUI extends JFrame {
 				dispose();
 			}
 		});
-		btnBalance.setBounds(75, 100, 218, 23);
+		btnBalance.setBounds(75, 110, 218, 23);
 		contentPane.add(btnBalance);
       
       
@@ -69,7 +69,7 @@ public class MainGUI extends JFrame {
 				dispose();
 			}
 		});
-		btnTransactionHistory.setBounds(75, 125, 218, 23);
+		btnTransactionHistory.setBounds(75, 145, 218, 23);
 		contentPane.add(btnTransactionHistory);
 		
       
@@ -84,7 +84,7 @@ public class MainGUI extends JFrame {
 				dispose();
 			}
 		});
-		btnPasswordReset.setBounds(75, 150, 218, 23);
+		btnPasswordReset.setBounds(75, 180, 218, 23);
 		contentPane.add(btnPasswordReset);
 		
       
@@ -98,7 +98,7 @@ public class MainGUI extends JFrame {
 				dispose();
 			}
 		});
-		btnChangeContactInformation.setBounds(75, 175, 218, 23);
+		btnChangeContactInformation.setBounds(75, 215, 218, 23);
 		contentPane.add(btnChangeContactInformation);
 		
 		JButton btnBack = new JButton("Back");

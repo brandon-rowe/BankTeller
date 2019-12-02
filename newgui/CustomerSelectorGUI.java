@@ -27,7 +27,7 @@ public class CustomerSelectorGUI extends JFrame {
 	 */
 	public CustomerSelectorGUI(driver driver) {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 554, 423);
+		setBounds(100, 100, 350, 300);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
@@ -35,16 +35,16 @@ public class CustomerSelectorGUI extends JFrame {
 		
 		JLabel lblSelectACustomer = new JLabel("Select a Customer");
 		lblSelectACustomer.setFont(new Font("Tahoma", Font.BOLD, 14));
-		lblSelectACustomer.setBounds(199, 38, 240, 24);
+		lblSelectACustomer.setBounds(115, 20, 240, 24);
 		contentPane.add(lblSelectACustomer);
 		
 		JTextArea txtAreaCustomerList = new JTextArea();
-		txtAreaCustomerList.setBounds(84, 83, 384, 238);
+		txtAreaCustomerList.setBounds(80, 50, 190, 150);
 		contentPane.add(txtAreaCustomerList);
 			
-		JScrollPane scrollPane_1 = new JScrollPane(txtAreaCustomerList);
+		/*JScrollPane scrollPane_1 = new JScrollPane(txtAreaCustomerList);
 		scrollPane_1.setBounds(90, 91, 323, 228);
-		contentPane.add(scrollPane_1);
+		contentPane.add(scrollPane_1);*/
 
 	    try
         {
@@ -66,7 +66,7 @@ public class CustomerSelectorGUI extends JFrame {
 				dispose();
 			}
 		});
-		btnLogout.setBounds(10, 351, 89, 23);
+		btnLogout.setBounds(85, 250, 89, 23);
 		contentPane.add(btnLogout);
 		
 		JButton btnContinue = new JButton("Continue");
@@ -80,17 +80,17 @@ public class CustomerSelectorGUI extends JFrame {
 
 			}
 		});
-		btnContinue.setBounds(439, 351, 89, 23);
+		btnContinue.setBounds(180, 250, 89, 23);
 		contentPane.add(btnContinue);
 		
 		txtFieldCustomerID = new JTextField();
-		txtFieldCustomerID.setBounds(273, 341, 86, 24);
+		txtFieldCustomerID.setBounds(190, 210, 86, 24);
 		contentPane.add(txtFieldCustomerID);
 		txtFieldCustomerID.setColumns(10);
 		
 		JLabel lblCustomerID = new JLabel("Customer ID");
-		lblCustomerID.setFont(new Font("Tahoma", Font.BOLD, 12));
-		lblCustomerID.setBounds(177, 345, 168, 14);
+		lblCustomerID.setFont(new Font("Tahoma", Font.BOLD, 14));
+		lblCustomerID.setBounds(85, 215, 168, 14);
 		contentPane.add(lblCustomerID);
 		
 

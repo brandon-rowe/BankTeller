@@ -10,7 +10,7 @@ import java.io.*;
 public class driver
 {
 	static Scanner scanner;
-	static String directory = "C:/Users/Risen/eclipse-workspace/511GroupProject/src/";
+	static String directory = "";
 	static String usern;
 	static String pass;
 	static employee employee;

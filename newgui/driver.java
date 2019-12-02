@@ -10,15 +10,18 @@ import java.io.*;
 public class driver
 {
 	static Scanner scanner;
-	static String directory = new File("").getAbsolutePath() + "\\src\\";
+	static String directory = "C:/Users/Risen/eclipse-workspace/511GroupProject/src/";
 	static String usern;
 	static String pass;
 	static employee employee;
+	
+
 	
 	public driver(String usern, String pass) {
 		this.usern = usern;
 		this.pass = pass;
 	}
+	
 	
 	public driver() {
 	}

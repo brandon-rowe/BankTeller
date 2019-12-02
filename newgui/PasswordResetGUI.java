@@ -48,21 +48,16 @@ public class PasswordResetGUI extends JFrame {
 					if (!pwdFieldPass.getText().equals("") && !pwdFieldVerifyPass.getText().equals(""))
 					{
 						if (pwdFieldPass.getText().equals(pwdFieldVerifyPass.getText())) {
-							
-							if (driver.type.equals("employee")) {
-								driver.employee.customer.resetPassword(pwdFieldPass.getText());
-								driver.employee.customer.writeCustomer();
-							}
-							else {
+
 								driver.resetPassword(driver.usern, pwdFieldPass.getText());
+								pwdFieldPass.setText("");
+								pwdFieldVerifyPass.setText("");
 							}
-							
-							pwdFieldPass.setText("");
-							pwdFieldVerifyPass.setText("");
+
 						}
 
 					}
-				} catch (IOException e1) {
+				 catch (IOException e1) {
 					// TODO Auto-generated catch block
 					e1.printStackTrace();
 				}

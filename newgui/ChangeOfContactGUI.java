@@ -60,13 +60,7 @@ public class ChangeOfContactGUI extends JFrame {
 			public void actionPerformed(ActionEvent arg0) {
 				try {
 					
-					if (driver.type.equals("employee")) {
-						driver.employee.customer.changeContact(txtFieldAddress.getText(), txtFieldPhoneNumber.getText());
-						driver.employee.customer.writeCustomer();
-					}
-					else {
 						driver.changeContact(driver.usern, txtFieldAddress.getText(), txtFieldPhoneNumber.getText());
-					}
 
 					txtFieldAddress.setText("");
 					txtFieldPhoneNumber.setText("");

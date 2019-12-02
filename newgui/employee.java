@@ -9,7 +9,7 @@ import java.io.*;
 public class employee
 {
 	String fname, lname, address, password;
-	customer customer;
+	static customer customer;
 	static String directory;
 	static Scanner scanner;
 

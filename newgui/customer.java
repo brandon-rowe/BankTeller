@@ -91,7 +91,7 @@ public class customer
 	{
 		String[] history = new String[100];
 		
-		scanner = new Scanner(new File(directory + "/Database/customer/" + userID + ".txt"));
+		scanner = new Scanner(new File(directory + userID + ".txt"));
 		
 		while (scanner.hasNextLine())
 		{
@@ -140,8 +140,8 @@ public class customer
 		boolean startLog = false;
 		java.util.Date date = new java.util.Date();
 
-		scanner = new Scanner(new File(directory + "/Database/customer/" + userID + ".txt"));
-		FileWriter filewriter = new FileWriter(directory + "/Database/customer/" + userID + "-edit.txt");
+		scanner = new Scanner(new File(directory + userID + ".txt"));
+		FileWriter filewriter = new FileWriter(directory + userID + "-edit.txt");
 		PrintWriter printwriter = new PrintWriter(filewriter);
 
 		while (scanner.hasNextLine())
@@ -165,8 +165,8 @@ public class customer
 		filewriter.close();
 		scanner.close();
 
-		File oldFile = new File(directory + "/Database/customer/" + userID + "-edit.txt");
-		File newFile = new File(directory + "/Database/customer/" + userID + ".txt");
+		File oldFile = new File(directory + userID + "-edit.txt");
+		File newFile = new File(directory + userID + ".txt");
 		newFile.delete();
 
 		oldFile.renameTo(newFile);
@@ -182,9 +182,9 @@ public class customer
 	
 	void writeCustomer() throws IOException
 	{
-		FileWriter filewriter = new FileWriter(directory + "/Database/customer/" + userID + "-new.txt");
+		FileWriter filewriter = new FileWriter(directory + userID + "-new.txt");
 		PrintWriter printwriter = new PrintWriter(filewriter);
-		scanner = new Scanner(new File(directory + "/Database/customer/" + userID + ".txt"));
+		scanner = new Scanner(new File(directory + userID + ".txt"));
 
 		printwriter.println(password);
 		printwriter.println(fname);
@@ -211,8 +211,8 @@ public class customer
 		filewriter.close();
 		scanner.close();
 		
-		File oldFile = new File(directory + "/Database/customer/" + userID + "-new.txt");
-		File newFile = new File(directory + "/Database/customer/" + userID + ".txt");
+		File oldFile = new File(directory + userID + "-new.txt");
+		File newFile = new File(directory + userID + ".txt");
 		newFile.delete();
 
 		oldFile.renameTo(newFile);

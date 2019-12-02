@@ -52,14 +52,7 @@ public class LoginGUI extends JFrame {
 			@SuppressWarnings("deprecation")
 			public void actionPerformed(ActionEvent e) {
 				driver driver;
-				
-				if (txtFieldUsername.getText().startsWith("E")) {
-					driver = new driver(txtFieldUsername.getText(), txtFieldPassword.getText(), "employee");
-				}
-				else
-				{
-					driver = new driver(txtFieldUsername.getText(), txtFieldPassword.getText(), "customer");
-				}
+				driver = new driver(txtFieldUsername.getText(), txtFieldPassword.getText());
 
 				try {
 					dispose();

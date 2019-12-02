@@ -68,13 +68,7 @@ public class TransactionHistoryGUI extends JFrame {
 	    try
         {
 	    	FileReader reader;
-			if (driver.type.equals("employee")) {
-	            reader = new FileReader(driver.directory + "/Database/customer/" + driver.employee.customer.userID + ".txt");
-			}
-			else {
-	            reader = new FileReader(driver.directory + "/Database/customer/" + driver.usern + ".txt");
-			}
-
+	        reader = new FileReader(driver.directory + driver.usern + ".txt");
             BufferedReader br = new BufferedReader(reader);
             txtAreaTransactionHistory.read( br, null );
             br.close();

@@ -48,7 +48,7 @@ public class CustomerSelectorGUI extends JFrame {
 
 	    try
         {
-            FileReader reader = new FileReader(driver.directory + "/Database/" + "customerlist.txt");
+            FileReader reader = new FileReader(driver.directory + "customerlist.txt");
             BufferedReader br = new BufferedReader(reader);
             txtAreaCustomerList.read( br, null );
             br.close();
@@ -72,16 +72,11 @@ public class CustomerSelectorGUI extends JFrame {
 		JButton btnContinue = new JButton("Continue");
 		btnContinue.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {	
-				try {
-					driver.employee.selectCustomer(txtFieldCustomerID.getText());
-					
-					MainGUI mainGUI = new MainGUI(driver);
-					mainGUI.setVisible(true);
-					dispose();
-				} catch (IOException e1) {
-					// TODO Auto-generated catch block
-					e1.printStackTrace();
-				}
+				driver.usern = txtFieldCustomerID.getText();
+				
+				MainGUI mainGUI = new MainGUI(driver);
+				mainGUI.setVisible(true);
+				dispose();
 
 			}
 		});

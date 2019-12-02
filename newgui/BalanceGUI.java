@@ -54,14 +54,8 @@ public class BalanceGUI extends JFrame {
 
 		
 		try {
-			if (driver.type.equals("employee")) {
-				txtFieldBalance.setText(Double.toString(driver.employee.customer.balance()));
-			}
-			else {
 				txtFieldBalance.setText(Double.toString(driver.balance(driver.usern)));
-			}
-			
-			txtFieldBalance.setCaretPosition(0);
+				txtFieldBalance.setCaretPosition(0);
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

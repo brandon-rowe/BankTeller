@@ -36,18 +36,14 @@ public class WithdrawDepositGUI extends JFrame {
 		btnWithdraw.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 					try {
-						if (driver.type.equals("employee")) {
-							driver.employee.customer.withdraw(txtFieldAmount.getText());
-						}
-						else {
 							driver.withdraw(driver.usern, txtFieldAmount.getText());	
+							txtFieldAmount.setText("");
 						}
-						txtFieldAmount.setText("");
-						//driver.employee.customer.writeCustomer();
-					} catch (IOException e) {
+					  catch (IOException e) {
 						// TODO Auto-generated catch block
-						e.printStackTrace();
+						e.printStackTrace(); 
 					}
+					
 			}
 		});
 		btnWithdraw.setBounds(124, 112, 89, 23);

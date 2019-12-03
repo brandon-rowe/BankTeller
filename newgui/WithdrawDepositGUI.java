@@ -47,7 +47,7 @@ public class WithdrawDepositGUI extends JFrame {
 					
 			}
 		});
-		btnWithdraw.setBounds(124, 112, 89, 23);
+		btnWithdraw.setBounds(124, 112, 95, 23);
 		contentPane.add(btnWithdraw);
 		
 		JButton btnDeposit = new JButton("Deposit");
@@ -64,7 +64,7 @@ public class WithdrawDepositGUI extends JFrame {
 			
 			}
 		});
-		btnDeposit.setBounds(124, 149, 89, 23);
+		btnDeposit.setBounds(124, 149, 95, 23);
 		contentPane.add(btnDeposit);
 		
 		JLabel lblAmount = new JLabel("Amount");

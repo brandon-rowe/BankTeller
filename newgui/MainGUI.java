@@ -90,7 +90,7 @@ public class MainGUI extends JFrame {
       
       
       
-		JButton btnChangeContactInformation = new JButton("Change Contact Information");
+		JButton btnChangeContactInformation = new JButton("Change Contact Info");
 		btnChangeContactInformation.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				ChangeOfContactGUI changeOfContactGUI = new ChangeOfContactGUI(driver);

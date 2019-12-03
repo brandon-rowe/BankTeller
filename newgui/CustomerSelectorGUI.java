@@ -68,7 +68,7 @@ public class CustomerSelectorGUI extends JFrame {
 				dispose();
 			}
 		});
-		btnLogout.setBounds(85, 250, 89, 23);
+		btnLogout.setBounds(65, 250, 95, 23);
 		contentPane.add(btnLogout);
 		
 		JButton btnContinue = new JButton("Continue");
@@ -82,7 +82,7 @@ public class CustomerSelectorGUI extends JFrame {
 
 			}
 		});
-		btnContinue.setBounds(180, 250, 89, 23);
+		btnContinue.setBounds(200, 250, 95, 23);
 		contentPane.add(btnContinue);
 		
 		txtFieldCustomerID = new JTextField();

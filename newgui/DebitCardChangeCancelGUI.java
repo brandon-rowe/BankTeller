@@ -93,7 +93,7 @@ public class DebitCardChangeCancelGUI extends JFrame {
 				dispose();
 			}
 		});
-		btnBack.setBounds(145, 181, 65, 23);
+		btnBack.setBounds(85, 181, 187, 23);
 		contentPane.add(btnBack);
 		
 		//source: https://stackoverflow.com/questions/7080205/popup-message-boxes

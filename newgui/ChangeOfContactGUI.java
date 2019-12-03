@@ -36,7 +36,7 @@ public class ChangeOfContactGUI extends JFrame {
 		
 		JLabel lblChangeOfContact = new JLabel("Change Contact Information");
 		lblChangeOfContact.setFont(new Font("Tahoma", Font.BOLD, 14));
-		lblChangeOfContact.setBounds(133, 24, 240, 24);
+		lblChangeOfContact.setBounds(93, 24, 240, 24);
 		contentPane.add(lblChangeOfContact);
 		
 		JLabel lblAddress = new JLabel("Address");
@@ -54,7 +54,7 @@ public class ChangeOfContactGUI extends JFrame {
 		
 		txtFieldPhoneNumber = new JTextField();
 		txtFieldPhoneNumber.setColumns(10);
-		txtFieldPhoneNumber.setBounds(120, 106, 209, 20);
+		txtFieldPhoneNumber.setBounds(135, 106, 194, 20);
 		contentPane.add(txtFieldPhoneNumber);
 		
 		JButton btnUpdate = new JButton("Update");
@@ -84,7 +84,7 @@ public class ChangeOfContactGUI extends JFrame {
 				dispose();
 			}
 		});
-		btnBack.setBounds(100, 150, 76, 23);
+		btnBack.setBounds(125, 150, 76, 23);
 		contentPane.add(btnBack);
 	}
 	

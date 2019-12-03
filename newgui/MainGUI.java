@@ -22,7 +22,7 @@ public class MainGUI extends JFrame {
 	public MainGUI(driver driver) {
 		setResizable(false);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 356, 350);
+		setBounds(100, 100, 350, 300);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
@@ -30,7 +30,7 @@ public class MainGUI extends JFrame {
 		
 		JLabel lblOptions = new JLabel("Options");
 		lblOptions.setFont(new Font("Tahoma", Font.BOLD, 18));
-		lblOptions.setBounds(150, 25, 155, 29);
+		lblOptions.setBounds(150, 15, 155, 29);
 		contentPane.add(lblOptions);
 		
 		
@@ -42,7 +42,7 @@ public class MainGUI extends JFrame {
 				dispose();
 			}
 		});
-		btnWithdrawDeposit.setBounds(75, 75, 218, 23);
+		btnWithdrawDeposit.setBounds(75, 50, 218, 23);
 		contentPane.add(btnWithdrawDeposit);
 		
       
@@ -56,7 +56,7 @@ public class MainGUI extends JFrame {
 				dispose();
 			}
 		});
-		btnBalance.setBounds(75, 110, 218, 23);
+		btnBalance.setBounds(75, 75, 218, 23);
 		contentPane.add(btnBalance);
       
       
@@ -69,7 +69,7 @@ public class MainGUI extends JFrame {
 				dispose();
 			}
 		});
-		btnTransactionHistory.setBounds(75, 145, 218, 23);
+		btnTransactionHistory.setBounds(75, 100, 218, 23);
 		contentPane.add(btnTransactionHistory);
 		
       
@@ -84,7 +84,7 @@ public class MainGUI extends JFrame {
 				dispose();
 			}
 		});
-		btnPasswordReset.setBounds(75, 180, 218, 23);
+		btnPasswordReset.setBounds(75, 125, 218, 23);
 		contentPane.add(btnPasswordReset);
 		
       
@@ -98,7 +98,7 @@ public class MainGUI extends JFrame {
 				dispose();
 			}
 		});
-		btnChangeContactInformation.setBounds(75, 215, 218, 23);
+		btnChangeContactInformation.setBounds(75, 150, 218, 23);
 		contentPane.add(btnChangeContactInformation);
 		
 		JButton btnBack = new JButton("Back");
@@ -109,7 +109,7 @@ public class MainGUI extends JFrame {
 				dispose();
 			}
 		});
-		btnBack.setBounds(137, 288, 94, 23);
+		btnBack.setBounds(137, 210, 94, 23);
 		contentPane.add(btnBack);
 		
 		JButton btnDebitCardManagement = new JButton("Debit Card Management");
@@ -120,7 +120,7 @@ public class MainGUI extends JFrame {
 				dispose();
 			}
 		});
-		btnDebitCardManagement.setBounds(75, 249, 218, 23);
+		btnDebitCardManagement.setBounds(75, 175, 218, 23);
 		contentPane.add(btnDebitCardManagement);
 		
 		

@@ -28,7 +28,7 @@ public class ChangeOfContactGUI extends JFrame {
 	public ChangeOfContactGUI(driver driver) {
 		setResizable(false);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 448, 212);
+		setBounds(100, 100, 350, 300);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
@@ -40,21 +40,21 @@ public class ChangeOfContactGUI extends JFrame {
 		contentPane.add(lblChangeOfContact);
 		
 		JLabel lblAddress = new JLabel("Address");
-		lblAddress.setBounds(68, 78, 108, 14);
+		lblAddress.setBounds(20, 78, 108, 14);
 		contentPane.add(lblAddress);
 		
 		txtFieldAddress = new JTextField();
 		txtFieldAddress.setColumns(10);
-		txtFieldAddress.setBounds(156, 75, 249, 20);
+		txtFieldAddress.setBounds(80, 75, 249, 20);
 		contentPane.add(txtFieldAddress);
 		
 		JLabel lblPhoneNumber = new JLabel("Phone Number");
-		lblPhoneNumber.setBounds(68, 113, 144, 14);
+		lblPhoneNumber.setBounds(20, 113, 144, 14);
 		contentPane.add(lblPhoneNumber);
 		
 		txtFieldPhoneNumber = new JTextField();
 		txtFieldPhoneNumber.setColumns(10);
-		txtFieldPhoneNumber.setBounds(156, 106, 249, 20);
+		txtFieldPhoneNumber.setBounds(120, 106, 209, 20);
 		contentPane.add(txtFieldPhoneNumber);
 		
 		JButton btnUpdate = new JButton("Update");
@@ -72,7 +72,7 @@ public class ChangeOfContactGUI extends JFrame {
 				}
 			}
 		});
-		btnUpdate.setBounds(236, 150, 89, 23);
+		btnUpdate.setBounds(20, 150, 89, 23);
 		contentPane.add(btnUpdate);
 		
 		JButton btnBack = new JButton("Back");
@@ -84,7 +84,7 @@ public class ChangeOfContactGUI extends JFrame {
 				dispose();
 			}
 		});
-		btnBack.setBounds(10, 11, 76, 23);
+		btnBack.setBounds(100, 150, 76, 23);
 		contentPane.add(btnBack);
 	}
 	

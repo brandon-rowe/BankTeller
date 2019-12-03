@@ -27,7 +27,7 @@ public class PasswordResetGUI extends JFrame {
 	public PasswordResetGUI(driver driver) {
 		setResizable(false);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 324, 244);
+		setBounds(100, 100, 350, 300);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
@@ -38,7 +38,7 @@ public class PasswordResetGUI extends JFrame {
 		lblPassowr.setBounds(105, 28, 240, 14);
 		contentPane.add(lblPassowr);
 		
-		JLabel lblNewPassword = new JLabel("Verify New Password");
+		JLabel lblNewPassword = new JLabel("Verify Password");
 		lblNewPassword.setBounds(38, 107, 191, 14);
 		contentPane.add(lblNewPassword);
 		

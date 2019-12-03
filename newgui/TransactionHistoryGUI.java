@@ -27,7 +27,7 @@ public class TransactionHistoryGUI extends JFrame {
 	public TransactionHistoryGUI(driver driver) {
 		setResizable(false);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 496, 358);
+		setBounds(100, 100, 350, 300);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
@@ -38,13 +38,13 @@ public class TransactionHistoryGUI extends JFrame {
 		txtAreaTransactionHistory.setRows(50);
 		txtAreaTransactionHistory.setLineWrap(true);
 		txtAreaTransactionHistory.setEditable(false);
-		txtAreaTransactionHistory.setBounds(90, 91, 323, 228);
+		txtAreaTransactionHistory.setBounds(20, 70, 300, 200);
 		contentPane.add(txtAreaTransactionHistory);
 		
 		
 		JLabel lblTransactionHistory = new JLabel("Transaction History");
 		lblTransactionHistory.setFont(new Font("Tahoma", Font.BOLD, 14));
-		lblTransactionHistory.setBounds(176, 56, 184, 24);
+		lblTransactionHistory.setBounds(106, 35, 184, 24);
 		contentPane.add(lblTransactionHistory);
 		
 		JButton btnBack = new JButton("Back");
@@ -61,7 +61,7 @@ public class TransactionHistoryGUI extends JFrame {
 		
 		
 		JScrollPane scrollPane = new JScrollPane(txtAreaTransactionHistory);
-		scrollPane.setBounds(90, 91, 323, 228);
+		scrollPane.setBounds(20, 70, 300, 200);
 		contentPane.add(scrollPane);
 
 		
